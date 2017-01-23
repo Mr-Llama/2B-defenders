@@ -17,5 +17,7 @@ function grabWood() {
 
 function startFire() {
 	
+	 if(wood==1) {
+	 		wood-=1;
+	 }
 }
-
