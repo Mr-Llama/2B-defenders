@@ -1,5 +1,5 @@
 // JavaScript Document
-var wood = 0;
+var wood = 1;
 
 function day() {
 	document.body.style.backgroundColor = "yellow";
@@ -17,7 +17,12 @@ function grabWood() {
 
 function startFire() {
 	
-	 if(wood==1) {
+	 if(wood >= 1) {
 	 		wood-=1;
+			document.write("You have started a fire");
+			
+	 }else {
+	 	
 	 }
 }
+
