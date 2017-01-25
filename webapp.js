@@ -1,5 +1,5 @@
 // JavaScript Document
-var wood = 1;
+var wood = 0;
 
 function day() {
 	document.body.style.backgroundColor = "yellow";
