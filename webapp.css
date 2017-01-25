@@ -15,3 +15,14 @@
 #footer {
 	
 }
+.Day {
+	background-color: gray;	
+	border: medium;
+	border-radius: 7px;
+}
+
+.Night {
+	background-color: lightgray;	
+	border: medium;
+	border-radius: 7px;
+}
