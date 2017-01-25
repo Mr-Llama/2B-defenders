@@ -1,4 +1,10 @@
 // JavaScript Document
+
+
+
+
+//jQuery
+
 var wood = 0;
 
 function day() {
@@ -25,4 +31,5 @@ function startFire() {
 	 	
 	 }
 }
+
 

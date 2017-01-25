@@ -19,12 +19,20 @@
 	</div>
 	<div id="screen_selector">
 
+		<input type="button" class="button" id="crafting" value="Crafting" onClick="$('.crafting').show(10);$('.village').hide(10);$('.area').hide(10);">
+		<input type="button" class="button" id="village" value="Village" onClick="$('.crafting').hide(10);$('.village').show(10);$('.area').hide(10);">
+		<input type="button" class="button" id="area" value="Area" onClick="$('.crafting').hide(10);$('.village').hide(10);$('.area').show(10);">
+
+
 		<input type="button" class="button" value="Crafting" onClick="">
 		<input type="button" class="button" value="Village" onClick="">
 		<input type="button" class="button" value="Area" onClick="">
+
 	</div>
 	<div id="screen">
-		<input type="button" class="button" value="" onClick="">
+		<input type="button" class="button crafting" value="craft" onClick="">
+		<input type="button" class="button village" value="wood" onClick="">
+		<input type="button" class="button area" value="map" onClick="">
 	</div>
 	<div id="footer">
 	<input type="button" value="day" class="Day" onClick="day()">
