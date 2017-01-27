@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
+
+#inventory
+
 #body {
 		width: auto;
-		height: auto;
+		height: 95%;
 }
 #textbox {
 	background-color: red;
@@ -46,3 +49,55 @@
 	border: medium;
 	border-radius: 7px;
 }
+
+
+/*   Screen Stuff   */
+
+@media screen and (max-width: 980px)   {
+		#body {
+				width: 94%;
+			}
+		#screen {
+				width: 75%;
+			}
+		#textbox {
+				width: 20%;	
+		}
+	}
+	
+	@media screen and (max-width: 700px)  {
+			#screen, #textbox {
+					width: auto; 
+					float: none;
+			}
+			#screen_selector {
+				height: auto;
+			}
+	}
+	
+	@media screen and (max-width: 480px)  {
+			#screen_selector {
+				height: auto;
+			}
+
+	@media only screen 
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)  {
+			body {
+					font-size:40px;
+			}
+			#screen_selector {
+					height: auto;
+			}
+			#screen {
+					width: auto;
+			}
+			#textbox {
+					width: auto;
+					clear: both;
+			}
+			#textbox, #screen, #footer {
+					border-radius: 16px;
+					border-width: 8px;
+			}
+	}
