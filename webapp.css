@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
-#inventory
+#inventory {
+	background-color: lightblue;	
+	width: 11.5%;
+	height: 95%;
+}
 
 #body {
 		width: auto;
