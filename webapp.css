@@ -1,3 +1,47 @@
 @charset "UTF-8";
 /* CSS Document */
+#body {
+		width: 815px;
+		height: auto;
+}
+#textbox {
+	background-color: red;
+	width: 150px;
+	height: 400px;
+	padding: 5px;
+	float: left;
+}
 
+#screen_selector {
+	background-color: blue;
+	width: 600px;
+	padding: 25px;
+	float: right
+}
+
+#screen {
+	background-color: green;
+	width: 600px;
+	height: 330px;
+	padding: 5px;
+	right: 10px;
+	float: right;
+}
+
+#footer {
+	background-color: yellow;
+	padding: 5px;
+	clear: both;
+	height: 30px;
+}
+.Day {
+	background-color: gray;	
+	border: medium;
+	border-radius: 7px;
+}
+
+.Night {
+	background-color: lightgray;	
+	border: medium;
+	border-radius: 7px;
+}
