@@ -1,4 +1,10 @@
 // JavaScript Document
+
+
+
+
+//jQuery
+
 var wood = 0;
 
 function display_text(text) {
@@ -27,6 +33,7 @@ function night() {
 
 function grabWood() {
 	wood+=1;
+
 	
 	document.getElementById("wood").value = "wood: " +wood;
 
@@ -40,6 +47,7 @@ function startFire() {
 			document.getElementById("wood").value = wood;
 			document.getElementById("text").value=fireMessage;
 			
+
 			
 	 }else {
 	 	alert("Not enough wood");
@@ -60,15 +68,3 @@ function makeTrap() {
 	
 }
 
-var house = 0;
-function buildHouse() {
-	
-	 if(wood >= 100) {
-	 		wood-=100;
-			house +=1
-			alert("You have build a house");
-			
-	 }else {
-	 	alert("Not enough wood");
-	 }
-}
