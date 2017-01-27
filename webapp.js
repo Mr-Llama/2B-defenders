@@ -24,6 +24,7 @@ function startFire() {
 	 if(wood >= 1) {
 	 		wood-=1;
 			alert("You have started a fire");
+			document.getElementById("d").value = wood;
 			
 	 }else {
 	 	alert("Not enough wood");
