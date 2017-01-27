@@ -2,9 +2,13 @@
 /* CSS Document */
 
 #inventory {
-	background-color: lightblue;	
+	background-color: lightBlue;	
 	width: 11.5%;
 	height: 95%;
+}
+
+.inventoryitem {
+	background-color: green;
 }
 
 #body {
