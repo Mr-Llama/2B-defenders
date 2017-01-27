@@ -1,6 +1,6 @@
 // JavaScript Document
 var wood = 0;
-
+var fireMessage=document.write("You have started a fire" + "<br>");
 function day() {
 	document.body.style.backgroundColor = "yellow";
 		
@@ -24,7 +24,7 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			document.getElementById("d").value = wood;
-			alert("You have started a fire");
+			document.getElementById("text").value=fireMessage;
 			
 			
 	 }else {
@@ -45,5 +45,3 @@ function buildHouse() {
 	 	alert("Not enough wood");
 	 }
 }
-
-
