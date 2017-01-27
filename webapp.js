@@ -1,4 +1,10 @@
 // JavaScript Document
+
+
+
+
+//jQuery
+
 var wood = 0;
 
 function day() {
@@ -19,10 +25,11 @@ function startFire() {
 	
 	 if(wood >= 1) {
 	 		wood-=1;
-			document.write("You have started a fire");
+			alert("You have started a fire");
 			
 	 }else {
-	 	
+	 	alert("Not enough wood");
 	 }
 }
+
 
