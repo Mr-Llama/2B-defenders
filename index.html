@@ -18,18 +18,13 @@
 		<p id="text">dfgh</p>
 	</div>
 	<div id="screen_selector">
-
 		<input type="button" class="button" id="crafting" value="Crafting" onClick="$('.crafting').show(10);$('.village').hide(10);$('.area').hide(10);">
 		<input type="button" class="button" id="village" value="Village" onClick="$('.crafting').hide(10);$('.village').show(10);$('.area').hide(10);">
 		<input type="button" class="button" id="area" value="Area" onClick="$('.crafting').hide(10);$('.village').hide(10);$('.area').show(10);">
-
-
-		<input type="button" class="button" value="Crafting" onClick="">
-		<input type="button" class="button" value="Village" onClick="">
-		<input type="button" class="button" value="Area" onClick="">
-
 	</div>
 	<div id="screen">
+		<input type="button" value="Grab Wood" onclick="grabWood()">
+		<input type="button" value="Start Fire" onclick="startFire()">
 		<input type="button" class="button crafting" value="craft" onClick="">
 		<input type="button" class="button village" value="wood" onClick="">
 		<input type="button" class="button area" value="map" onClick="">
@@ -39,19 +34,5 @@
 	<input type="button" value="night" class="Night" onClick="night()">
 	</div>
 </div>
-	<div id="footer">
-		<input type="button" value="day" onClick="day()">
-		<input type="button" value="night" onClick="night()">
-		<h1>Navigator</h1>
-	</div>
-	<div id="screen">
-	<input type="button" value="Grab Wood" onclick="grabWood()">
-	<input type="button" value="Start Fire" onclick="startFire()">
-	</div>
-	<div id="footer">
-	<input type="button" value="day" onClick="day()">
-	<input type="button" value="night" onClick="night()">
-	</div>
-
 </body>
 </html>
