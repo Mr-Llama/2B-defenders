@@ -1,13 +1,21 @@
 @charset "UTF-8";
 /* CSS Document */
 
+#buttons {
+	background-color: white;
+	width: 80%;	
+}
+
 #inventory {
-	background-color: lightBlue;	
-	width: 11.5%;
+	background-color: lightBlue;
+	float: right;
+	width: 20%;
 	height: 95%;
+	text-align: center;
 }
 
 .inventoryitem {
+	border: rgba(0,0,0,0.00);
 	background-color: green;
 }
 
