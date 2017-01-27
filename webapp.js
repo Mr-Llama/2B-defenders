@@ -21,8 +21,8 @@ function grabWood() {
 
 function startFire() {
 	
-	 if(wood >= 1) {
-	 		wood-=1;
+	 if(wood >= 5) {
+	 		wood-=5;
 			document.getElementById("d").value = wood;
 			alert("You have started a fire");
 			
