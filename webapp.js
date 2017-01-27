@@ -1,6 +1,15 @@
 // JavaScript Document
 var wood = 0;
-var fireMessage=document.write("You have started a fire" + "<br>");
+
+function display_text(text) {
+	var text1 = document.getElementById("text1").innerHTML;
+	document.getElementById("text2").innerHTML = text1;
+	var text2 = document.getElementById("text2").innerHTML;
+	document.getElementById("text3").innerHTML = text;
+	var text3 = document.getElementById("text3").innerHTML;
+	document.getElementById("text4").innerHTML = text;
+}
+
 function day() {
 	document.body.style.backgroundColor = "yellow";
 		
@@ -20,7 +29,7 @@ function grabWood() {
 }
 
 function startFire() {
-	
+	var fireMessage="You have started a fire";
 	 if(wood >= 5) {
 	 		wood-=5;
 			document.getElementById("d").value = wood;
