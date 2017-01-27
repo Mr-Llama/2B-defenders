@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 #body {
-		width: 815px;
+		width: 1500px;
 		height: auto;
 }
 #textbox {
 	background-color: red;
-	width: 150px;
+	width: 250px;
 	height: 400px;
 	padding: 5px;
 	float: left;
@@ -14,14 +14,14 @@
 
 #screen_selector {
 	background-color: blue;
-	width: 600px;
+	width: 1100px;
 	padding: 25px;
 	float: right
 }
 
 #screen {
 	background-color: green;
-	width: 600px;
+	width: 1070px;
 	height: 330px;
 	padding: 5px;
 	right: 10px;
