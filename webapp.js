@@ -40,8 +40,9 @@ function startFire() {
 	var fireMessage="You have started a fire";
 	 if(wood >= 5) {
 	 		wood-=5;
-			document.getElementById("wood").value = wood;
+			document.getElementById("wood").value =  wood;
 			document.getElementById("text").value=fireMessage;
+			document.getElementById("wood").value = "wood: " +wood;
 			
 
 			
@@ -54,14 +55,15 @@ var traps= 0;
 function makeTrap() {
 	var trapMessage="You have built a trap";
 	 if(wood >= 10) {
-	 		wood-=10;
+	 		wood -= 10;
+			traps += 1;
 			document.getElementById("traps").value = "traps: " + traps;
-			document.getElementById("text").value=trapMessage;
+			document.getElementById("wood").value = "wood: " + wood;
+			
 			
 			
 	 }else {
 	 	alert("Not enough wood");
 	 }
-	
 }
 
