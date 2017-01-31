@@ -3,6 +3,7 @@
 
 #buttons {
 	background-color: white;
+	float: left;
 	width: 80%;	
 }
 
