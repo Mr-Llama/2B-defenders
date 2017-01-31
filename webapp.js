@@ -1,10 +1,6 @@
 // JavaScript Document
 
 
-
-
-//jQuery
-
 var wood = 0;
 
 function display_text(text) {
