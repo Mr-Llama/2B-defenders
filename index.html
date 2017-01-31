@@ -62,8 +62,8 @@
 		</div>
 	</div>
 	<div id="footer">
-	<input type="button" value="day" class="Day" onClick="day()">
-	<input type="button" value="night" class="Night" onClick="night()">
+	<input type="button" value="day" class="Day" onClick="day();$('.button').addClass('light');$('.button').removeClass('dark');">
+	<input type="button" value="night" class="Night" onClick="night();$('.button').addClass('dark');$('.button').removeClass('light');">
 	</div>
 </div>
 </body>
