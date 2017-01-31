@@ -72,23 +72,24 @@
 .button {
 		border-radius: 6px;
 		font-size: 10px;
-		color: grey;
 }
 
 .light {
+		color: black;
 		background-color: white;
-		border-left-color: D4D4D4;
-		border-top-color: D4D4D4;
-		border-right-color: A8A8A8;
-		border-bottom-color: A8A8A8;
+		border-left-color: #D4D4D4;
+		border-top-color: #D4D4D4;
+		border-right-color: #A8A8A8;
+		border-bottom-color: #A8A8A8;
 }
 
 .dark {
+		color: white;
 		background-color: black;
-		border-left-color: 454545;
-		border-top-color: 454545;
-		border-right-color: 404040;
-		border-bottom-color: 404040;
+		border-left-color: #454545;
+		border-top-color: #454545;
+		border-right-color: #404040;
+		border-bottom-color: #404040;
 }
 
 
