@@ -67,3 +67,14 @@ function makeTrap() {
 	 }
 }
 
+function trade() {
+	 var tradasaurous rex = Math.random	;
+	  
+	  if(tradeasaurous rex =< 0.2) {
+			confirm("Scary guys wanna trade 10 wood for 3 fur");
+	  }
+	  if else (tradeasaurous rex =< 0.4) {
+			  confirm("Scary guys wanna trade 10 wood for 2 porkchops fur");
+	  }
+}
+
