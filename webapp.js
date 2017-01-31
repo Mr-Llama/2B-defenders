@@ -61,6 +61,7 @@ function makeTrap() {
 			
 	 }else {
 	 	alert("Not enough wood");
+	 }
 	
 }
 
