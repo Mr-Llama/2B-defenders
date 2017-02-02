@@ -3,7 +3,7 @@
 
 var wood = 0;
 
-function display_text(text) {
+function display_text(text1) {
 	var text1 = document.getElementById("text1").innerHTML;
 	document.getElementById("text2").innerHTML = text1;
 	var text2 = document.getElementById("text2").innerHTML;
@@ -18,16 +18,19 @@ function display_text(text) {
 }
 
 function day() {
-	document.body.style.backgroundColor = "yellow";
+	document.body.style.backgroundColor = "white";
 	$('.button').addClass('light');
 	$('.button').removeClass('dark');
-		
+	$('.div').addClass('lightDiv');
+	$('.div').removeClass('darkDiv');
 }
 
 function night() {
 	document.body.style.backgroundColor = "black";
 	$('.button').addClass('dark');
 	$('.button').removeClass('light');
+	$('.div').addClass('darkDiv');
+	$('.div').removeClass('lightDiv');
 }
 
 function grabWood() {
@@ -44,7 +47,7 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			document.getElementById("wood").value =  wood;
-			document.getElementById("text").value=fireMessage;
+			document.getElementById("text1").value=fireMessage;
 			document.getElementById("wood").value = "wood: " +wood;
 			
 
@@ -61,13 +64,45 @@ function makeTrap() {
 	 		wood -= 10;
 			traps += 1;
 			document.getElementById("traps").value = "traps: " + traps;
-			document.getElementById("wood").value = "wood: " + wood;
-			
-			
-			
+			document.getElementById("wood").value = "wood: " + wood;			
 	 }else {
 	 	alert("Not enough wood");
 	 }
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+function trade() {
+	var chooseNum =Math.round(Math.random()*10);
+switch(chooseNum) {
+	case 1:
+	case 2:
+	case 3: 
+				alert("hi");
+				break;
+	case 4:
+	case 5:
+	case 6:
+				alert("bye");
+				break;
+	case 7:
+	case 8:
+	case 9:
+				alert("hello");
+	case 10: 
+	case 0: 
+				alert("whatup")
+				break;
+}
