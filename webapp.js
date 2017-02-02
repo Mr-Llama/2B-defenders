@@ -101,8 +101,12 @@ switch(chooseNum) {
 	case 8:
 	case 9:
 				alert("hello");
-	case 10: 
-	case 0: 
-				alert("whatup")
 				break;
+	case 10: 
+				alert("whatup");
+				break;
+	default:
+				alert("BYEHELLO");
+				break;
+}
 }
