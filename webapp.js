@@ -3,7 +3,7 @@
 
 var wood = 0;
 
-function display_text(text) {
+function display_text(text1) {
 	var text1 = document.getElementById("text1").innerHTML;
 	document.getElementById("text2").innerHTML = text1;
 	var text2 = document.getElementById("text2").innerHTML;
@@ -18,7 +18,7 @@ function display_text(text) {
 }
 
 function day() {
-	document.body.style.backgroundColor = "yellow";
+	document.body.style.backgroundColor = "white";
 	$('.button').addClass('light');
 	$('.button').removeClass('dark');
 		
@@ -31,7 +31,6 @@ function night() {
 }
 
 function grabWood() {
-		alert("hi");
 	wood+=1;
 
 	
@@ -45,7 +44,7 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			document.getElementById("wood").value =  wood;
-			document.getElementById("text").value=fireMessage;
+			document.getElementById("text1").value=fireMessage;
 			document.getElementById("wood").value = "wood: " +wood;
 			
 
@@ -69,3 +68,37 @@ function makeTrap() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+function trade() {
+	
+	
+	
+	
+	
+	
+	
+	
+}
+function choose {
+var whichOne = Math.floor(Math.random(
+
+
+
+
+
+
+
+	
+}
