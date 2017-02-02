@@ -70,19 +70,16 @@ function makeTrap() {
 	 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function checkTraps {
+		if (traps >= 1) {
+			traps -= 1;
+			leather += Math.round(Math.random()*10)
+			document.getElementById("traps").value = "traps: " + traps;
+		}
+		else {
+			alert("You have no traps, idiot...");
+		}
+}
 
 function trade() {
 	var chooseNum =Math.round(Math.random()*10);
