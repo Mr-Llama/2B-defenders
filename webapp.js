@@ -32,6 +32,7 @@ function night() {
 }
 
 function grabWood() {
+		alert("hi");
 	wood+=1;
 
 	
@@ -59,8 +60,8 @@ function makeTrap() {
 	var trapMessage="You have built a trap";
 	 if(wood >= 10) {
 	 		wood-=10;
-			document.getElementById("traps").value = "traps: " + traps;
-			document.getElementById("text").value=trapMessage;
+			document.getElementById("traps").value = "traps: " +traps;
+	
 			
 			
 	 }else {
