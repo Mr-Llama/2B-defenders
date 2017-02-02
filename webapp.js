@@ -19,12 +19,15 @@ function display_text(text) {
 
 function day() {
 	document.body.style.backgroundColor = "yellow";
+	$('.button').addClass('light');
+	$('.button').removeClass('dark');
 		
 }
 
 function night() {
 	document.body.style.backgroundColor = "black";
-		
+	$('.button').addClass('dark');
+	$('.button').removeClass('light');
 }
 
 function grabWood() {
@@ -66,3 +69,5 @@ function makeTrap() {
 	 	alert("Not enough wood");
 	 }
 }
+
+
