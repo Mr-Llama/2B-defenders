@@ -2,7 +2,8 @@
 
 
 var wood = 0;
-
+var gems = 0;
+var leather = 0;
 function display_text(text1) {
 	var text1 = document.getElementById("text1").innerHTML;
 	document.getElementById("text2").innerHTML = text1;
@@ -87,23 +88,33 @@ switch(chooseNum) {
 	case 1:
 	case 2:
 	case 3: 
-				alert("hi");
+				var firstCase = confirm("Would you like to trade 20 leather for 1 gem?");
+				if(firstCase) {
+					leather-=20;
+					document.getElementById("leather").value =  leather; 
+					document.getElementById("leather").value = "leather: " + leather;	
+					gems+=1;
+					document.getElementById("gems").value =  gems; 
+					document.getElementById("gems").value = "gems: " + gems;	
+				}else{
+					alert("FINE DON'T TRADE! I DONT CARE!");
+				}
 				break;
 	case 4:
 	case 5:
 	case 6:
-				alert("bye");
+				confirm("Would you like to trade 100 wood for 10 fur?");
 				break;
 	case 7:
 	case 8:
 	case 9:
-				alert("hello");
+				confirm("Would you like to trade 10 gems for 1 diamond?")
 				break;
 	case 10: 
-				alert("whatup");
+				confirm("Would you like to trade 1000 wood for 1 diamond?")
 				break;
 	default:
-				alert("BYEHELLO");
+			    confirm("Would you like to trade 50 leather for 5 gems?")
 				break;
 }
 }
