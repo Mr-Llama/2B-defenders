@@ -75,9 +75,11 @@ function makeTrap() {
 
 function checkTraps(){
 		if (traps >= 1) {
-			leather += Math.round(Math.random()*10);
-			document.getElementById("leather").value =  leather; 
-			document.getElementById("leather").value = "leather: " + leather;
+			for (i = 0; i < traps; i++){
+				leather += Math.round(Math.random()*10);
+				document.getElementById("leather").value =  leather; 
+				document.getElementById("leather").value = "leather: " + leather;
+			}
 		}
 		else {
 			alert("You have no traps, idiot...");
@@ -89,8 +91,12 @@ function trade() {
 switch(chooseNum) {
 	case 1:
 	case 2:
-	case 3: 
+	
 				var firstCase = confirm("Would you like to trade 20 leather for 1 gem?");
+				if(firstCase === false){
+					alert("FINE DON'T TRADE! I DONT CARE!");
+					break;
+				}
 				if(firstCase && leather >= 20) {
 					leather-=20;
 					document.getElementById("leather").value =  leather; 
@@ -98,16 +104,18 @@ switch(chooseNum) {
 					gems+=1;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
-					}else if(leather < 20){
+					}else{
 						alert("You don't have enough leather...");
-				}else{
-					alert("FINE DON'T TRADE! I DONT CARE!");
-				}
-				break;
+					}
+					break;
 	case 4:
 	case 5:
 	case 6:
-			var secondCase =	confirm("Would you like to trade 100 wood for 10 fur?");
+			var secondCase = confirm("Would you like to trade 100 wood for 10 fur?");
+				if(secondCase === false){
+					alert("FINE DON'T TRADE! I DONT CARE!");
+					break;
+				}
 					if(secondCase && wood >= 100) {
 					wood-=100;
 					document.getElementById("wood").value =  wood; 
@@ -115,16 +123,18 @@ switch(chooseNum) {
 					fur+=10;
 					document.getElementById("fur").value =  fur; 
 					document.getElementById("fur").value = "fur: " + fur;	
-					}else if(wood < 100){
+					}else{
 						alert("You don't have enough wood...");
-				}else{
-					alert("FINE DON'T TRADE! I DONT CARE!");
 				}
 				break;
 	case 7:
 	case 8:
-	case 9:
+	
 				var thirdCase = confirm("Would you like to trade 10 gems for 1 diamond?");
+				if(thirdCase === false){
+					alert("FINE DON'T TRADE! I DONT CARE!");
+					break;
+				}
 					if(thirdCase && gems >= 10) {
 					gems-=10;
 					document.getElementById("gems").value =  gems; 
@@ -132,14 +142,16 @@ switch(chooseNum) {
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
-					}else if(gems < 10){
+					}else {
 						alert("You don't have enough gems...");
-				}else{
-					alert("FINE DON'T TRADE! I DONT CARE!");
 				}
 				break;
 	case 10: 
 				var fourthCase = confirm("Would you like to trade 1000 wood for 1 diamond?");
+				if(fourthCase === false){
+					alert("FINE DON'T TRADE! I DONT CARE!");
+					break;
+				}
 					if(fourthCase && wood >= 1000 ) {
 					wood-=1000;
 					document.getElementById("wood").value =  wood; 
@@ -147,14 +159,17 @@ switch(chooseNum) {
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
-					}else if(wood < 1000){
+					}else{
 						alert("You don't have enough wood...");
-				}else{
-					alert("FINE DON'T TRADE! I DONT CARE!");
 				}
 				break;
 	default:
+	
 			   var fifthCase = confirm("Would you like to trade 50 leather for 5 gems?");
+			   if(fifthCase === false){
+					alert("FINE DON'T TRADE! I DONT CARE!");
+					break;
+				}
 			   	if(fifthCase && leather >= 50) {
 					leather-=50;
 					document.getElementById("leather").value =  leather; 
@@ -162,10 +177,8 @@ switch(chooseNum) {
 					gems+=5;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
-					}else if(leather < 50){
+					}else{
 						alert("You don't have enough leather...");
-				}else{
-					alert("FINE DON'T TRADE! I DONT CARE!");
 				}
 				break;
 }
