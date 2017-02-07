@@ -75,9 +75,9 @@ function makeTrap() {
 
 function checkTraps(){
 		if (traps >= 1) {
-			traps -= 1;
 			leather += Math.round(Math.random()*10);
-			document.getElementById("traps").value = "traps: " + traps;
+			document.getElementById("leather").value =  leather; 
+			document.getElementById("leather").value = "leather: " + leather;
 		}
 		else {
 			alert("You have no traps, idiot...");
