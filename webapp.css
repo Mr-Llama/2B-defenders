@@ -6,8 +6,10 @@
 	float: left;
 	width: 80%;	
 }
+#buttons, #inventory, #body, #textbox, #screen_selector, #screen, #footer{
+}
 
-#inventory {;
+#inventory {
 	float: right;
 	width: 20%;
 	height: 95%;
@@ -79,9 +81,11 @@
 		border-bottom-color: #A8A8A8;
 }
 .lightDiv {
-	border-width: 10px;
 	background-color: lightgrey;
-	border-color: black;
+	border: ridge;
+	border-radius: 25px;
+	border-width: 3px;
+	border-color: grey;
 }
 
 .dark {
@@ -95,8 +99,11 @@
 
 
 .darkDiv {
-	border-color: white;
 	background-color: darkgrey;
+	border: ridge;
+	border-radius: 25px;
+	border-width: 3px;
+	border-color: white;
 }
 
 /*   Screen Stuff   */
