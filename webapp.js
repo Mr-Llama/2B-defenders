@@ -22,7 +22,8 @@ function c_text(text1) {
 
 function leather_armor() {
 		if(leather >= 100) {
-			armor="leather"	
+			armor="leather";
+			document.getElementById("armor").value=armor;	
 		}else {
 			c_text("You dont have enough leather to make armor...")	
 		}
