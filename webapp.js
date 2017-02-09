@@ -23,25 +23,27 @@ function c_text(text1) {
 function leather_armor() {
 		if(leather >= 100) {
 			armor="leather";
-			document.getElementById("armor").value=armor;	
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough leather to make armor...")	
+			c_text("You dont have enough leather to make armor...");	
 		}
 }
 
 function iron_armor() {
 		if(iron >= 100) {
-			armor="iron"	
+			armor="iron";
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough iron to make armor...")	
+			c_text("You dont have enough iron to make armor...");
 		}
 }
 
 function diamond_armor() {
 		if(diamond >= 50) {
-			armor="diamond"	
+			armor="diamond";
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough diamonds to make armor...")	
+			c_text("You dont have enough diamonds to make armor...");
 		}
 }
 
@@ -105,7 +107,7 @@ function checkTraps(){
 				amount_f = Math.round(Math.random() * 5);
 				leather += amount_l;
 				fur +=  amount_f;
-				traps = 0;
+				traps -= 1;
 				c_text("The traps contained " + amount_l + " leather and " + amount_f + " fur." );
 				document.getElementById("leather").value =  leather; 
 				document.getElementById("leather").value = "leather: " + leather;
