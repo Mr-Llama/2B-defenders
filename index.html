@@ -12,7 +12,7 @@
 </head>
 <body>
 <!--Add your HTML here-->
-<div id="body">
+<div id="body" onLoad="play()">
 	<div id="textbox" class="div">
 
 			<p id="text1"></p>
@@ -27,9 +27,10 @@
 			<p id="text10"></p>
 	</div>
 	<div id="screen_selector" class="div">
-		<input type="button" class="button" id="crafting" value="Crafting" onClick="$('.crafting').show(10);$('.village').hide(10);$('.area').hide(10);">
-		<input type="button" class="button" id="village" value="Village" onClick="$('.crafting').hide(10);$('.village').show(10);$('.area').hide(10);">
-		<input type="button" class="button" id="area" value="Area" onClick="$('.crafting').hide(10);$('.village').hide(10);$('.area').show(10);">
+		<input type="button" class="button" id="crafting" value="Crafting" onClick="$('.crafting').show(10);$('.village').hide(10);$('.area').hide(10);$('.cave').hide(10);">
+		<input type="button" class="button" id="village" value="Village" onClick="$('.crafting').hide(10);$('.village').show(10);$('.area').hide(10);$('.cave').hide(10);">
+		<input type="button" class="button" id="area" value="Area" onClick="$('.crafting').hide(10);$('.village').hide(10);$('.area').show(10);$('.cave').hide(10);">
+		<input type="button" class="button" id="area" value="cave" onClick="$('.crafting').hide(10);$('.village').hide(10);$('.area').hide(10);$('.cave').show(10);">
 	</div>
 	<div id="screen" class="div">
 		<div id="buttons" class="div">
@@ -37,9 +38,10 @@
 			<input type="button" class="button crafting" value="Start Fire" onclick="startFire()">
 			<input type="button" class="button crafting" value="Make traps" onClick="makeTrap()">
 			<input type="button" class="button crafting" value="Check Traps" onClick="checkTraps()">
-			<input type="button" class="button crafting" value="" onClick="">
-			<input type="button" class="button crafting" value="" onClick="">
-			<input type="button" class="button crafting" value="" onClick="">
+			<input type="button" class="button crafting" value="Leaher Armor" onClick="leather_armor()">
+			<input type="button" class="button crafting" value="iron Armor" onClick="iron_armor()">
+			<input type="button" class="button crafting" value="Diamond Armor" onClick="diamond_armor()">
+			
 		<!--village-->
 			<input type="button" class="button village" value="Grab Wood" onclick="grabWood()">
 			<input type="button" class="button village" value="Trading" onClick="trade()">
@@ -48,12 +50,143 @@
 			<input type="button" class="button village" value="" onClick="">
 			<input type="button" class="button village" value="" onClick="">
 		<!--area-->
+			<table border="0" class="area">
+			<caption>Map</caption>
+				<tbody>
+					<tr>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>π</td><td>)</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+					</tr>
+					<tr>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>π</td><td>)</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>#</td><td>(</td>
+					</tr>
+					<tr>
+						<td>t</td><td>&nbsp;&nbsp;</td><td>(</td><td>π</td><td>)</td>
+						<td>&nbsp;&nbsp;</td><td>t</td><td>π</td><td>t</td><td>&nbsp;&nbsp;</td>
+						<td>&nbsp;&nbsp;</td><td>Y</td><td>$</td><td>Y</td><td>&nbsp;&nbsp;</td>
+						<td>i</td><td>.</td><td>&nbsp;&nbsp;</td><td>y</td><td>=</td>
+					</tr>
+				</tbody>
+			</table>
 			<input type="button" class="button area" value="" onClick="">
 			<input type="button" class="button area" value="" onClick="">
 			<input type="button" class="button area" value="" onClick="">
 			<input type="button" class="button area" value="" onClick="">
 		</div>
 		<div id="inventory" class="div">
+		<!--cave-->
+			<input type="button" class="button cave" value="Mine" onclick="mine()">
+			<input type="button" class="button cave" value="" onClick="">
+			<input type="button" class="button cave" value="" onClick="">
+			<input type="button" class="button cave" value="" onClick="">
+			<input type="button" class="button cave" value="" onClick="">
 		<!--Inventory-->
 			<input id="wood" class="inventoryitem" readonly><br>
 			<input id="traps" class="inventoryitem" readonly><br>
@@ -61,6 +194,8 @@
 			<input id="leather" class="inventoryitem" readonly><br>
 			<input id="diamonds" class="inventoryitem" readonly><br>
 			<input id="gems" class="inventoryitem" readonly><br>
+			<input id="iron" class="inventoryitem" readonly><br>
+			<input id="armor" class="inventoryitem" readonly><br>
 		</div>
 	</div>
 	<div id="footer" class="div">
