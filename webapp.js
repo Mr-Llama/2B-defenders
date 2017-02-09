@@ -6,19 +6,42 @@ var gems = 0;
 var leather = 0;
 var diamonds = 0;
 var fur = 0;
-function display_text(text1) {
-	var text1 = document.getElementById("text1").innerHTML;
-	document.getElementById("text2").innerHTML = text1;
-	var text2 = document.getElementById("text2").innerHTML;
-	document.getElementById("text3").innerHTML = text2;
-	var text3 = document.getElementById("text3").innerHTML;
-	document.getElementById("text4").innerHTML = text3;
-	var text4 = document.getElementById("text4").innerHTML;
-	document.getElementById("text5").innerHTML = text4;
-	var text5 = document.getElementById("text5").innerHTML;
-	document.getElementById("text6").innerHTML = text5;
+var text1 = "";
+var text2 = "";
+var text3 = "";
+var text4 = "";
+var text5 = "";
+var text6 = "";
+var text7 = "";
+var text8 = "";
+var text9 = "";
+var text10 = "";
 
+
+function c_text(text) {
+	 /*text10 = text9;
+	text9 = text8;
+	text8 = text7;
+	text7 = text6;
+	text6 = text5;
+	text5 = text4;
+	text4 = text3;
+	text3 = text2;
+	text2 = text1;
+	text1 = text;*/
+	document.getElementByID("text1").innerHTML = text;
+	document.getElementByID("text2").innerHTML = text2;
+	document.getElementByID("text3").innerHTML = text3;
+	document.getElementByID("text4").innerHTML = text4;
+	document.getElementByID("text5").innerHTML = text5;
+	document.getElementByID("text6").innerHTML = text6;
+	document.getElementByID("text7").innerHTML = text7;
+	document.getElementByID("text8").innerHTML = text8;
+	document.getElementByID("text9").innerHTML = text9;
+	document.getElementByID("text10").innerHTML = text10;
 }
+
+
 
 function day() {
 	document.body.style.backgroundColor = "white";
@@ -46,11 +69,11 @@ function grabWood() {
 }
 
 function startFire() {
-	var fireMessage="You have started a fire";
+	
 	 if(wood >= 5) {
 	 		wood-=5;
 			document.getElementById("wood").value =  wood;
-			document.getElementById("text1").value=fireMessage;
+			c_text("You have started a fire");
 			document.getElementById("wood").value = "wood: " +wood;
 			
 
