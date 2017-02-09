@@ -9,8 +9,9 @@ var fur = 0;
 var text1;
 var amount_l;
 var amount_f;
-
-
+var armor;
+var pickaxe;
+var pick_durab;
 
 function c_text(text1) {
  
@@ -19,7 +20,29 @@ function c_text(text1) {
 	
 }
 
+function leather_armor() {
+		if(leather >= 100) {
+			armor="leather"	
+		}else {
+			c_text("You dont have enough leather to make armor...")	
+		}
+}
 
+function iron_armor() {
+		if(iron >= 100) {
+			armor="iron"	
+		}else {
+			c_text("You dont have enough iron to make armor...")	
+		}
+}
+
+function diamond_armor() {
+		if(diamond >= 50) {
+			armor="diamond"	
+		}else {
+			c_text("You dont have enough diamonds to make armor...")	
+		}
+}
 
 function day() {
 	document.body.style.backgroundColor = "white";
@@ -81,7 +104,7 @@ function checkTraps(){
 				amount_f = Math.round(Math.random() * 5);
 				leather += amount_l;
 				fur +=  amount_f;
-				traps -= 1;
+				traps = 0;
 				c_text("The traps contained " + amount_l + " leather and " + amount_f + " fur." );
 				document.getElementById("leather").value =  leather; 
 				document.getElementById("leather").value = "leather: " + leather;
@@ -192,4 +215,25 @@ switch(chooseNum) {
 				}
 				break;
 }
+}
+
+function makePickaxe() {
+	if(wood >= 20 && leather >= 5) {
+			pickaxe += 1;
+			wood -= 20;
+			leather -= 5;
+			document.getElementById("wood").value =  wood; 
+		    document.getElementById("wood").value = "wood: " + wood;	
+		    document.getElementById("leather").value =  leather; 
+			document.getElementById("leather").value = "leather: " + leather;	
+		}
+}
+
+function mining() {
+		if(pickaxe>=1) {
+		pick_durab -= 5;
+		}
+		else {
+			c_text("YOU AINT HAVE NO PICKAXES BOI");
+		}
 }
