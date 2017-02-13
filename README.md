@@ -35,7 +35,7 @@ Insert answer here.
 This is our version 1.0 We hope you enjoy it!
 
 ## Credits
-* Tyler Gill
+* Tyler Gill @RainbowFox101
 * Matthew Uthayopas
 * Donavan Burk
 * Abhinav Raghavendra
