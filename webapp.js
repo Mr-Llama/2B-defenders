@@ -4,8 +4,9 @@
 var wood = 0;
 var gems = 0;
 var leather = 0;
-var diamonds = 100;
+var diamonds = 0;
 var fur = 0;
+var iron = 0;
 var text1;
 var amount_l;
 var amount_f;
@@ -39,7 +40,7 @@ function iron_armor() {
 }
 
 function diamond_armor() {
-		if(diamond >= 50) {
+		if(diamonds >= 50) {
 			armor="diamond";
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
@@ -225,23 +226,61 @@ function makePickaxe() {
 			pickaxe += 1;
 			wood -= 20;
 			leather -= 5;
+			pick_durab=100;
 			document.getElementById("wood").value =  wood; 
 		    document.getElementById("wood").value = "wood: " + wood;	
 		    document.getElementById("leather").value =  leather; 
 			document.getElementById("leather").value = "leather: " + leather;	
+			c_text("You have made a pickaxe");
+			
+		}else {
+			c_text("YOU DONT HAVE ENOUGH WOOD AND LEATHER");
+		
 		}
 }
 
 function mining() {
 		if(pickaxe>=1) {
-		pick_durab -= 5;
+			
 		}
 		else {
 			c_text("YOU AINT HAVE NO PICKAXES BOI");
 		}
 }
 
+function get_Iron() {
+	if(pick_durab > 0) {
+		iron +=1;
+		pick_durab-=5;
+		document.getElementById("pick_durab").value =  pick_durab; 
+		document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+		document.getElementById("iron").value =  iron; 
+		document.getElementById("iron").value = "iron: " + iron;	
+		c_text("You mined 1 Iron");
+	}else {
+		c_text("YOUR PICKAXE IS BROKEN BOI");
+	}
+}
 
+function get_diamond() {
+	if(pick_durab > 0 && pick_durab>5) {
+		diamonds +=1;
+		pick_durab-=10;
+		document.getElementById("pick_durab").value =  pick_durab; 
+		document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+		document.getElementById("diamonds").value =  diamonds; 
+		document.getElementById("diamonds").value = "diamonds: " + diamonds;	
+		c_text("You mined 1 diamond");
+		
+	}else if(pick_durab<=5 && pick_durab !==0) {
+			c_text("YOUR PICKAXE AINT ABLE TO MINE DIAMOND");
+	}
+		
+	else {
+		
+		c_text("YOUR PICKAXE IS BROKEN BOI");
+	}
+}
 
 
 
