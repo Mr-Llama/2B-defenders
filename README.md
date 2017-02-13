@@ -1,7 +1,7 @@
 #Defenders
 
 ## Description
-Describe your app here!
+A version of A Dark Room. 
 <!--
 ## FAQs
 
@@ -32,10 +32,10 @@ Insert answer here.
    * - to indicate something removed, just be careful with your markdown syntax!
 -->
 ### Version 1.0
-This is our initial release. We hope you enjoy it!
+This is our version 1.0 We hope you enjoy it!
 
 ## Credits
-* Tyler Gill
-* Mathhew Uthayopas
+* Tyler Gill 
+* Matthew Uthayopas
 * Donavan Burk
 * Abhinav Raghavendra
