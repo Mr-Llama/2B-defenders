@@ -1,17 +1,19 @@
 // JavaScript Document
 
 
-var wood = 0;
+var wood = 100000000;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
 var fur = 0;
-var text1;
+var iron = 0;
 var amount_l;
 var amount_f;
-var armor;
-var pickaxe;
-var pick_durab;
+var armor = "";
+var pickaxe = 0;
+var pick_durab = 0;
+var house = 0;
+var villagers = 0;
 
 function c_text(text1) {
  
@@ -22,25 +24,28 @@ function c_text(text1) {
 
 function leather_armor() {
 		if(leather >= 100) {
-			armor="leather"	
+			armor="leather";
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough leather to make armor...")	
+			c_text("You dont have enough leather to make armor...");	
 		}
 }
 
 function iron_armor() {
 		if(iron >= 100) {
-			armor="iron"	
+			armor="iron";
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough iron to make armor...")	
+			c_text("You dont have enough iron to make armor...");
 		}
 }
 
 function diamond_armor() {
-		if(diamond >= 50) {
-			armor="diamond"	
+		if(diamonds >= 50) {
+			armor="diamond";
+			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
-			c_text("You dont have enough diamonds to make armor...")	
+			c_text("You dont have enough diamonds to make armor...");
 		}
 }
 
@@ -87,7 +92,7 @@ function startFire() {
 var traps= 0;
 function makeTrap() {
 	 if(wood >= 10) {
-		  c_text("You created A TRAP!!")
+		  c_text("You created A TRAP!!");
 	 		wood -= 10;
 			traps += 1;
 			document.getElementById("traps").value = "traps: " + traps;
@@ -104,7 +109,7 @@ function checkTraps(){
 				amount_f = Math.round(Math.random() * 5);
 				leather += amount_l;
 				fur +=  amount_f;
-				traps = 0;
+				traps -= 1;
 				c_text("The traps contained " + amount_l + " leather and " + amount_f + " fur." );
 				document.getElementById("leather").value =  leather; 
 				document.getElementById("leather").value = "leather: " + leather;
@@ -219,21 +224,202 @@ switch(chooseNum) {
 
 function makePickaxe() {
 	if(wood >= 20 && leather >= 5) {
-			pickaxe += 1;
+			pickaxe+=1;
 			wood -= 20;
 			leather -= 5;
+			pick_durab+=100;
+			document.getElementById("pick_durab").value =  pick_durab; 
+		    document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+			document.getElementById("pickaxe").value =  pickaxe; 
+		    document.getElementById("pickaxe").value = "pickaxe: " + pickaxe;	
 			document.getElementById("wood").value =  wood; 
 		    document.getElementById("wood").value = "wood: " + wood;	
 		    document.getElementById("leather").value =  leather; 
 			document.getElementById("leather").value = "leather: " + leather;	
+			c_text("You have made a pickaxe");
+			
+		}else {
+			c_text("YOU DONT HAVE ENOUGH WOOD AND LEATHER");
+		
 		}
 }
 
 function mining() {
 		if(pickaxe>=1) {
-		pick_durab -= 5;
+			
 		}
 		else {
 			c_text("YOU AINT HAVE NO PICKAXES BOI");
 		}
 }
+
+function get_Iron() {
+	if(pick_durab > 0) {
+		iron +=1;
+		pick_durab-=5;
+		document.getElementById("pick_durab").value =  pick_durab; 
+		document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+		document.getElementById("iron").value =  iron; 
+		document.getElementById("iron").value = "iron: " + iron;	
+		c_text("You mined 1 Iron");
+	}else {
+		c_text("YOUR PICKAXE IS BROKEN BOI");
+	}
+}
+
+function get_diamond() {
+	if(pick_durab > 0 && pick_durab>5) {
+		diamonds +=1;
+		pick_durab-=10;
+		document.getElementById("pick_durab").value =  pick_durab; 
+		document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+		document.getElementById("diamonds").value =  diamonds; 
+		document.getElementById("diamonds").value = "diamonds: " + diamonds;	
+		c_text("You mined 1 diamond");
+		
+	}else if(pick_durab<=5 && pick_durab !==0) {
+			c_text("YOUR PICKAXE AINT ABLE TO MINE DIAMOND");
+	}
+		
+	else {
+		
+		c_text("YOUR PICKAXE IS BROKEN BOI");
+	}
+}
+
+
+
+function makeHouse() {
+	 if(wood >= 100) {
+		  c_text("You created a house and got some villagers!!");
+	 		wood -= 100;
+			house+=1;
+			villagers+=4;
+			
+			document.getElementById("house").value = "house: " + house;
+			document.getElementById("wood").value = "wood: " + wood;		
+				
+	 }else {
+	 	c_text("Not enough wood");
+	 }
+}
+
+function villagerWood() {
+	wood+=villagers;
+	document.getElementById("wood").value =  wood; 	
+	document.getElementById("wood").value = "wood: " + wood;	
+
+}
+
+
+ 
+    window.setInterval(villagerWood, 5000);
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JQuery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
