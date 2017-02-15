@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-var wood = 100000000;
+var wood = 0;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
