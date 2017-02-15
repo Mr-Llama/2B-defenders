@@ -1,18 +1,19 @@
 // JavaScript Document
 
 
-var wood = 0;
+var wood = 100000000;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
 var fur = 0;
 var iron = 0;
-var text1;
 var amount_l;
 var amount_f;
-var armor;
-var pickaxe;
-var pick_durab;
+var armor = "";
+var pickaxe = 0;
+var pick_durab = 0;
+var house = 0;
+var villagers = 0;
 
 function c_text(text1) {
  
@@ -91,7 +92,7 @@ function startFire() {
 var traps= 0;
 function makeTrap() {
 	 if(wood >= 10) {
-		  c_text("You created A TRAP!!")
+		  c_text("You created A TRAP!!");
 	 		wood -= 10;
 			traps += 1;
 			document.getElementById("traps").value = "traps: " + traps;
@@ -223,10 +224,14 @@ switch(chooseNum) {
 
 function makePickaxe() {
 	if(wood >= 20 && leather >= 5) {
-			pickaxe += 1;
+			pickaxe+=1;
 			wood -= 20;
 			leather -= 5;
-			pick_durab=100;
+			pick_durab+=100;
+			document.getElementById("pick_durab").value =  pick_durab; 
+		    document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
+			document.getElementById("pickaxe").value =  pickaxe; 
+		    document.getElementById("pickaxe").value = "pickaxe: " + pickaxe;	
 			document.getElementById("wood").value =  wood; 
 		    document.getElementById("wood").value = "wood: " + wood;	
 		    document.getElementById("leather").value =  leather; 
@@ -284,9 +289,32 @@ function get_diamond() {
 
 
 
+function makeHouse() {
+	 if(wood >= 100) {
+		  c_text("You created a house and got some villagers!!");
+	 		wood -= 100;
+			house+=1;
+			villagers+=4;
+			
+			document.getElementById("house").value = "house: " + house;
+			document.getElementById("wood").value = "wood: " + wood;		
+				
+	 }else {
+	 	c_text("Not enough wood");
+	 }
+}
+
+function villagerWood() {
+	wood+=villagers;
+	document.getElementById("wood").value =  wood; 	
+	document.getElementById("wood").value = "wood: " + wood;	
+
+}
 
 
-
+ 
+    window.setInterval(villagerWood, 5000);
+	
 
 
 
