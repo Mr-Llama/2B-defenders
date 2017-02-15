@@ -1,18 +1,19 @@
 // JavaScript Document
 
 
-var wood = 0;
+var wood = 100000000;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
 var fur = 0;
 var iron = 0;
-var text1;
 var amount_l;
 var amount_f;
 var armor;
 var pickaxe;
 var pick_durab;
+var house = 0;
+var villagers = 0;
 
 function c_text(text1) {
  
@@ -284,10 +285,26 @@ function get_diamond() {
 
 
 
+function makeHouse() {
+	 if(wood >= 100) {
+		  c_text("You created a house and got some villagers!!");
+	 		wood -= 100;
+			house+=1;
+			villagers+=4;
+			
+			document.getElementById("house").value = "house: " + house;
+			document.getElementById("wood").value = "wood: " + wood;		
+				
+	 }else {
+	 	c_text("Not enough wood");
+	 }
+}
 
 
-
-
+while(villagers>=1) {
+ 
+    setTimeout(function(){ wood+=villagers; }, 5000);
+}
 
 
 
