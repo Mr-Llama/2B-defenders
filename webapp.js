@@ -333,7 +333,7 @@ function needFire() {
 }
 
 window.setInterval(villagerWood, 5000);
-window.setInterval(needFire, 6000);
+window.setInterval(needFire, 60000);
 
 
 
