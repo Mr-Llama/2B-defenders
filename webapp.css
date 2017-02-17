@@ -42,7 +42,9 @@
 
 #crafting {
 	color: white;
+	font-size: 12px;
 	height: 50px;
+	width: 50px;
 	background-image: url(images/crafting.png);
 	background-size: 100%
 	
@@ -60,10 +62,11 @@
 
 #area {
 	color: white;
+	font-size: 13px;
 	height: 50px;
 	width: 50px;
-	background-image: url(images/crafting.png);
-	background-size: 100%
+	background-image: url(images/area.png);
+	background-size: 190%
 	
 }
 
