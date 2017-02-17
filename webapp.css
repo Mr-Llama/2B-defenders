@@ -27,7 +27,7 @@
 		height: 95%;
 }
 #textbox {
-	width: 19%;
+	width: 18%;
 	height: 500px;
 	padding: 5px;
 	float: left;
@@ -38,6 +38,33 @@
 	height: 40px;
 	padding: 25px;
 	float: right
+}
+
+#crafting {
+	color: white;
+	height: 50px;
+	background-image: url(images/crafting.png);
+	background-size: 100%
+	
+}
+
+#village {
+	color: black;
+	font-size:13px;
+	width: 50px;
+	height: 50px;
+	background-image: url(images/village.png);
+	background-size: 140%
+	
+}
+
+#area {
+	color: white;
+	height: 50px;
+	width: 50px;
+	background-image: url(images/crafting.png);
+	background-size: 100%
+	
 }
 
 #screen {	
