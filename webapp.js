@@ -14,6 +14,7 @@ var pickaxe = 0;
 var pick_durab = 0;
 var house = 0;
 var villagers = 0;
+var fire = 0;
 
 function c_text(text1) {
  
@@ -73,14 +74,19 @@ function grabWood() {
 
 	
 }
-
+function reducefire() {
+	fire-=1;
+}
 function startFire() {
 	
 	 if(wood >= 5) {
 	 		wood-=5;
+			fire+=1;
+			window.setInterval(reducefire, 60000);
 			document.getElementById("wood").value =  wood;
 			c_text("You have started a fire");
 			document.getElementById("wood").value = "wood: " +wood;
+			
 			
 
 			
@@ -310,11 +316,24 @@ function villagerWood() {
 	document.getElementById("wood").value = "wood: " + wood;	
 
 }
+function die() {
+	if(fire===0) {
+		alert("You have died! >:-)");
+		location.reload();
+	}
+}
+function needFire() {
+	if(fire===0) {
+		c_text("You need a fire or you will die. If you dont make a fire in the next 30 seconds you will get hypothermia and die");
+		window.setInterval(die, 30000);
+	}else{
+		
+	}
 
+}
 
- 
-    window.setInterval(villagerWood, 5000);
-	
+window.setInterval(villagerWood, 5000);
+window.setInterval(needFire, 60000);
 
 
 
@@ -348,6 +367,7 @@ function villagerWood() {
 
 
 // JQuery
+
 
 
 
