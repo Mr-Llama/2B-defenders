@@ -15,6 +15,7 @@ var pick_durab = 0;
 var house = 0;
 var villagers = 0;
 var fire = 0;
+var weapon = "";
 
 function c_text(text1) {
  
@@ -25,6 +26,7 @@ function c_text(text1) {
 
 function leather_armor() {
 		if(leather >= 100) {
+		    leather -= 100;
 			armor="leather";
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
@@ -34,6 +36,7 @@ function leather_armor() {
 
 function iron_armor() {
 		if(iron >= 100) {
+			iron -= 100;
 			armor="iron";
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
@@ -44,11 +47,25 @@ function iron_armor() {
 function diamond_armor() {
 		if(diamonds >= 50) {
 			armor="diamond";
+			diamonds -= 50;
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough diamonds to make armor...");
 		}
 }
+
+function woodSword() {
+		if(wood >= 10 && leather >= 5) {
+				wood -= 10;
+				leather -= 5;
+				c_text("You made a wood sword");
+				weapon = "wooden sword";
+				document.getElementById("weapon").value="weapon =" + weapon;
+		}
+		else{
+			c_text("You are short of resources...")	;
+		}
+} 
 
 function day() {
 	document.body.style.backgroundColor = "white";
