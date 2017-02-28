@@ -7,6 +7,14 @@
 	height: auto;
 }
 
+.map_button {
+	height: 30px;
+	width: 30px;
+	background-color: brown;
+	border: thick;
+	border-radius: 4px;
+}
+
 
 #inventory {
 	float: right;
