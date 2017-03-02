@@ -392,9 +392,9 @@ function iMiner(change){
 		villagers-=change;
 		ironMiners+=change;
 		document.getElementById("villagers").value =  villagers; 	
-		document.getElementById("villagers").value = "villagers: " + villagers;
+		document.getElementById("villagers").value = "Villagers: " + villagers;
 		document.getElementById("ironMiners").value =  ironMiners; 	
-		document.getElementById("ironMiners").value = "ironMiners: " + ironMiners;
+		document.getElementById("ironMiners").value = "Iron Miners: " + ironMiners;
 }
 
 
