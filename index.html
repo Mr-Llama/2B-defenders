@@ -52,9 +52,9 @@
 		<!--village-->
 			<input type="button" class="button village" value="Grab Wood" onclick="grabWood()">
 		
-			<input type="button" class="button village" value="" onClick="">
-			<input type="button" class="button village" value="" onClick="">
-			<input type="button" class="button village" value="" onClick="">
+			<input type="text" class="button village" value="Add iron miners" readonly>
+			<input type="button" class="button village" value="+1" onClick="iMiner(1)">
+			<input type="button" class="button village" value="-1" onClick="iMiner(-1)">
 		<!--area-->
 			<table border="0" class="area" id="areaImage">
 			<caption>Map</caption>
@@ -113,6 +113,8 @@
 			<input id="pick_durab" class="inventoryitem" readonly><br>
 			<input id="house" class="inventoryitem" readonly><br>
 			<input id="pickaxe" class="inventoryitem" readonly><br>
+			<input id="villagers" class="inventoryitem" readonly><br>
+			<input id="iron miners" class="inventoryitem" readonly>
 		</div>
 	</div>
 	<div id="footer" class="div">
