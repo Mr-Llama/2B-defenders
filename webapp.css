@@ -20,7 +20,7 @@
 #inventory {
 	float: right;
 	width: 19%;
-	height: 95%;
+	height: 98%;
 	text-align: center;
 	border: medium;
 }
@@ -28,6 +28,7 @@
 .inventoryitem {
 	border-color: black;
 	color: black;
+	height: 10px;
 	background-color: white;
 }
 
@@ -46,6 +47,11 @@
 	height: auto;
 	padding: 25px;
 	float: right;
+}
+
+#areaImage {
+	background-image: url(images/backgroundMap.jpg)	;
+	background-size:100%;
 }
 
 #crafting {
