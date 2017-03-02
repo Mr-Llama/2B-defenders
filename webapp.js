@@ -366,7 +366,7 @@ window.setInterval(die, 30000);
 	
 
 window.setInterval(villagerWood, 5000);
-window.setInterval(needFire, 30000);
+window.setInterval(needFire, 1000);
 
 
 
