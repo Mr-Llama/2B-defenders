@@ -3,14 +3,15 @@
 #buttons {
 	/*background-color: rgba(0,0,0,0.00);*/
 	float: left;
-	width: 80%;	
+	width: 80%;
 	height: auto;
 }
+
 
 .map_button {
 	height: 30px;
 	width: 30px;
-	background-color: brown;
+	background-color: rgba(96,96,96,0.62);
 	border: thick;
 	border-radius: 4px;
 }
@@ -40,7 +41,6 @@
 	padding: 5px;
 	float: left;
 }
-
 #screen_selector {
 	width: 75%;
 	height: auto;
