@@ -405,10 +405,14 @@ window.setInterval(needFire, 1000);
 
 
 function iMiner(change){
+	 if(villagers > 0){
 		villagers-=change;
 		ironMiners+=change; 	
 		document.getElementById("villagers").value = "Villagers: " + villagers;	
 		document.getElementById("ironMiners").value = "Iron Miners: " + ironMiners;
+	 }else{
+		 c_text("You don't have any villagers to become miners");
+	 }
 }
 
 
