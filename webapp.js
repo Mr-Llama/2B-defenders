@@ -349,7 +349,9 @@ function subtractTime() {
 
 	
 	
-
+function runNeedFire() {
+		needFire();
+}
 
 
 function needFire() {
@@ -358,6 +360,7 @@ function needFire() {
 		subtractTime();
 		}else{
 	countdownFire=30;
+	runNeedFire();
 }
 window.setInterval(die, 30000);
 }
