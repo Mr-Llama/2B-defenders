@@ -15,7 +15,10 @@ var pick_durab = 0;
 var house = 0;
 var villagers = 0;
 var fire = 0;
-
+var weapon = "";
+var countdownFire = 30;
+var ironMiners = 0;
+var hypo = 0;
 function c_text(text1) {
  
 	document.getElementById("text1").innerHTML = text1;
@@ -25,6 +28,7 @@ function c_text(text1) {
 
 function leather_armor() {
 		if(leather >= 100) {
+		    leather -= 100;
 			armor="leather";
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
@@ -34,6 +38,7 @@ function leather_armor() {
 
 function iron_armor() {
 		if(iron >= 100) {
+			iron -= 100;
 			armor="iron";
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
@@ -44,11 +49,25 @@ function iron_armor() {
 function diamond_armor() {
 		if(diamonds >= 50) {
 			armor="diamond";
+			diamonds -= 50;
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough diamonds to make armor...");
 		}
 }
+
+function woodSword() {
+		if(wood >= 10 && leather >= 5) {
+				wood -= 10;
+				leather -= 5;
+				c_text("You made a wood sword");
+				weapon = "wooden sword";
+				document.getElementById("weapon").value="weapon =" + weapon;
+		}
+		else{
+			c_text("You are short of resources...")	;
+		}
+} 
 
 function day() {
 	document.body.style.backgroundColor = "white";
@@ -82,11 +101,12 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			fire+=1;
-			window.setInterval(reducefire, 60000);
+			window.setTimeout(reducefire, 30000);
 			document.getElementById("wood").value =  wood;
 			c_text("You have started a fire");
 			document.getElementById("wood").value = "wood: " +wood;
-			
+			countdownFire=30;
+			window.setTimeout(needFire, 1000);
 			
 
 			
@@ -301,13 +321,19 @@ function makeHouse() {
 	 		wood -= 100;
 			house+=1;
 			villagers+=4;
-			
+			document.getElementById("vilagers").value = "villagers: " + villagers;
+			document.getElementById("villagers").value = "villagers: " + villagers;		
 			document.getElementById("house").value = "house: " + house;
 			document.getElementById("wood").value = "wood: " + wood;		
 				
 	 }else {
 	 	c_text("Not enough wood");
 	 }
+}
+
+function update() {
+		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die");
+		window.setInterval(countdownFire-=1, 1000);
 }
 
 function villagerWood() {
@@ -317,24 +343,39 @@ function villagerWood() {
 
 }
 function die() {
-	if(fire===0) {
+	if(hypo===1) {
 		alert("You have died! >:-)");
 		location.reload();
 	}
+	
 }
-function needFire() {
-	if(fire===0) {
-		c_text("You need a fire or you will die. If you dont make a fire in the next 30 seconds you will get hypothermia and die");
-		window.setInterval(die, 30000);
-	}else{
-		
-	}
 
+
+
+
+
+
+
+
+function needFire() {
+		if(fire===0) {
+		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die");
+		window.setInterval(countdownFire-=1, 1000);
+			if(countdownFire===0){
+				hypo = 1;
+			}
+		}else{
+		countdownFire=30;
+		hypo = 0;	
+		
 }
+window.setInterval(die, 30000);
+}
+
+	
 
 window.setInterval(villagerWood, 5000);
-window.setInterval(needFire, 60000);
-
+window.setInterval(needFire, 1000);
 
 
 
@@ -371,11 +412,51 @@ window.setInterval(needFire, 60000);
 
 
 
+function iMiner(change){
+	 if(villagers > 0){
+		villagers-=change;
+		ironMiners+=change; 	
+		document.getElementById("villagers").value = "Villagers: " + villagers;	
+		document.getElementById("ironMiners").value = "Iron Miners: " + ironMiners;
+	 }else{
+		 c_text("You don't have any villagers to become miners");
+	 }
+}
 
 
-
-
-
+function screenChange(id){
+		$('.crafting').hide(10);
+		$('.village').hide(10);
+		$('.area').hide(10);
+		$('.cave').hide(10);
+		$('.mine').hide(10);
+		switch(id){
+			case 0:
+				$('.crafting').show(10);
+				break;
+			case 1:
+				$('.village').show(10);
+				break;
+			case 2:
+				$('.area').show(10);
+				break;
+			case 3:
+				$('.cave').show(10);
+				break;
+			case 4:
+				if(pick_durab > 0){
+						$('.mine').show(10);
+						break;
+				}else{
+						c_text("YOU AINT HAVE NO PICKAXES BOI");
+						break;
+				}
+				break;
+			default:
+				$('.crafting').show(10);
+				break;
+		}
+}
 
 
 

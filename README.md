@@ -35,6 +35,7 @@ Insert answer here.
 This is our version 1.0 We hope you enjoy it!
 
 ## Credits
+* Nicholas Le
 * Tyler Gill 
 * Matthew Uthayopas
 * Donavan Burk

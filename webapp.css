@@ -3,15 +3,24 @@
 #buttons {
 	/*background-color: rgba(0,0,0,0.00);*/
 	float: left;
-	width: 80%;	
+	width: 80%;
 	height: auto;
+}
+
+
+.map_button {
+	height: 45px;
+	width: 45px;
+	background-color: rgba(96,96,96,0.10);
+	border: thick;
+	border-radius: 4px;
 }
 
 
 #inventory {
 	float: right;
 	width: 19%;
-	height: 95%;
+	height: 98%;
 	text-align: center;
 	border: medium;
 }
@@ -19,6 +28,7 @@
 .inventoryitem {
 	border-color: black;
 	color: black;
+	height: 10px;
 	background-color: white;
 }
 
@@ -32,12 +42,16 @@
 	padding: 5px;
 	float: left;
 }
-
 #screen_selector {
 	width: 75%;
 	height: auto;
 	padding: 25px;
 	float: right;
+}
+
+#areaImage {
+	background-image: url(images/backgroundMap.jpg)	;
+	background-size:100%;
 }
 
 #crafting {
