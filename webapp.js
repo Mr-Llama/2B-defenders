@@ -321,7 +321,7 @@ function makeHouse() {
 	 		wood -= 100;
 			house+=1;
 			villagers+=4;
-			document.getElementById("vilagers").value = "villagers: " + villagers;
+			document.getElementById("villagers").value = "villagers: " + villagers;
 			document.getElementById("villagers").value = "villagers: " + villagers;		
 			document.getElementById("house").value = "house: " + house;
 			document.getElementById("wood").value = "wood: " + wood;		
@@ -356,7 +356,6 @@ function die() {
 
 
 
-
 function needFire() {
 		if(fire===0) {
 		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die");
@@ -371,10 +370,17 @@ function needFire() {
 }
 window.setInterval(die, 30000);
 }
-
+function ironMining() {  
+	if(pickaxe >= 1)
+	iron+=ironMiners;
+	document.getElementById("iron").value =  iron; 	
+	document.getElementById("iron").value = "iron: " + iron;	
+	pick_durab-=3*ironMiners;
+}
 	
 
 window.setInterval(villagerWood, 5000);
+window.setInterval(ironMining, 5000);
 window.setInterval(needFire, 1000);
 
 
