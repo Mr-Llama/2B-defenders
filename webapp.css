@@ -9,9 +9,9 @@
 
 
 .map_button {
-	height: 30px;
-	width: 30px;
-	background-color: rgba(96,96,96,0.62);
+	height: 45px;
+	width: 45px;
+	background-color: rgba(96,96,96,0.10);
 	border: thick;
 	border-radius: 4px;
 }
