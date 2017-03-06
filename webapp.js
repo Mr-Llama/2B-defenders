@@ -18,6 +18,7 @@ var fire = 0;
 var weapon = "";
 var countdownFire = 30;
 var ironMiners = 0;
+var hypo = 0;
 function c_text(text1) {
  
 	document.getElementById("text1").innerHTML = text1;
@@ -100,11 +101,12 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			fire+=1;
-			window.setInterval(reducefire, 1000);
+			window.setTimeout(reducefire, 30000);
 			document.getElementById("wood").value =  wood;
 			c_text("You have started a fire");
 			document.getElementById("wood").value = "wood: " +wood;
-			
+			countdownFire=30;
+			window.setTimeout(needFire, 1000);
 			
 
 			
@@ -329,6 +331,11 @@ function makeHouse() {
 	 }
 }
 
+function update() {
+		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die");
+		window.setInterval(countdownFire-=1, 1000);
+}
+
 function villagerWood() {
 	wood+=villagers;
 	document.getElementById("wood").value =  wood; 	
@@ -336,16 +343,16 @@ function villagerWood() {
 
 }
 function die() {
-	if(fire===0) {
+	if(hypo===1) {
 		alert("You have died! >:-)");
 		location.reload();
 	}
 	
 }
 
-function subtractTime() {
-	window.setInterval(countdownFire-=1, 1000);
-}
+
+
+
 
 
 
@@ -353,9 +360,14 @@ function subtractTime() {
 function needFire() {
 		if(fire===0) {
 		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die");
-		subtractTime();
+		window.setInterval(countdownFire-=1, 1000);
+			if(countdownFire===0){
+				hypo = 1;
+			}
 		}else{
-	countdownFire=30;
+		countdownFire=30;
+		hypo = 0;	
+		
 }
 window.setInterval(die, 30000);
 }
@@ -364,7 +376,6 @@ window.setInterval(die, 30000);
 
 window.setInterval(villagerWood, 5000);
 window.setInterval(needFire, 1000);
-
 
 
 
