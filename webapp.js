@@ -100,7 +100,7 @@ function startFire() {
 	 if(wood >= 5) {
 	 		wood-=5;
 			fire+=1;
-			window.setInterval(reducefire, 60000);
+			window.setInterval(reducefire, 1000);
 			document.getElementById("wood").value =  wood;
 			c_text("You have started a fire");
 			document.getElementById("wood").value = "wood: " +wood;
@@ -347,11 +347,7 @@ function subtractTime() {
 	window.setInterval(countdownFire-=1, 1000);
 }
 
-	
-	
-function runNeedFire() {
-		needFire();
-}
+
 
 
 function needFire() {
@@ -360,12 +356,10 @@ function needFire() {
 		subtractTime();
 		}else{
 	countdownFire=30;
-	runNeedFire();
 }
 window.setInterval(die, 30000);
 }
-		
-		
+
 	
 
 window.setInterval(villagerWood, 5000);
