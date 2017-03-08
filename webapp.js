@@ -21,6 +21,7 @@ var countdownFire = 30;
 var ironMiners = 0;
 var hypo = 0;
 var bullets = 0;
+
 function c_text(text1, line) {
   switch (line) {
 	  case 0:
@@ -448,27 +449,6 @@ function attackR() {
 				
 		}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
