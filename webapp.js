@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-var wood = 1000;
+var wood = 0;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
@@ -434,6 +434,22 @@ function hunting() {
 
 
 
+function attackM() {
+		if(weapon = "wooden sword") {
+				var survival = Math.random();
+				if(survival <= 0.25) {
+						c_text()
+				}
+		}
+}
+
+function attackR() {
+		if(secWeapon = wood) {
+				
+		}
+}
+
+
 
 
 
@@ -484,6 +500,7 @@ function screenChange(id){
 		$('.area').hide(10);
 		$('.cave').hide(10);
 		$('.mine').hide(10);
+		$('#huntingScreen').hide(10);
 		switch(id){
 			case 0:
 				$('.crafting').show(10);
