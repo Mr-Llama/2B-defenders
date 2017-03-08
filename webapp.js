@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-var wood = 1000;
+var wood = 0;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
@@ -432,13 +432,14 @@ function hunting() {
 		$('.area').hide(10);
 }
 
-function survRate() {
-		math.Random()
-}
+
 
 function attackM() {
 		if(weapon = "wooden sword") {
-				
+				var survival = Math.random();
+				if(survival <= 0.25) {
+						c_text()
+				}
 		}
 }
 
