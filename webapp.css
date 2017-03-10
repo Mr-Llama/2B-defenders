@@ -30,8 +30,30 @@
 		width: 90%;
 		float: right;
 		margin-right: 32px;
-		height: 30%;
+		height: 65%;
 		background-color: rgba(53,206,62,1.00);
+}
+#huntingText {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 94%;
+		float: right;
+		margin-right: 16px;
+		height: auto;
+		background-color: white;
+}
+#huntingButtons {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 95%;
+		float: right;
+		margin-right: 16px;
+		height: 30%;
+		background-color: rgba(129,103,30,1.00);
 }
 #inventory {
 	float: right;
