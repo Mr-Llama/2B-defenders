@@ -23,11 +23,8 @@ var hypo = 0;
 var bullets = 0;
 <<<<<<< HEAD
 var creature = "";
-
-
 =======
 >>>>>>> origin/JS
-
 function c_text(text1, line) {
   switch (line) {
 	  case 0:
