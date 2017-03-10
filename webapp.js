@@ -452,8 +452,6 @@ function hunting() {
 		$('.area').hide(10);
 }
 
-
-
 function attackM() {
 		if(weapon === "wooden_sword") {
 				var survival = Math.random();
@@ -479,6 +477,9 @@ function attackM() {
 			}
 		}
 }
+
+
+
 
 function attackR() {
 		if(secWeapon === wood) {
