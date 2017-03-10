@@ -20,7 +20,7 @@ var secWeapon = "";
 var countdownFire = 30;
 var ironMiners = 0;
 var hypo = 0;
-var bullets = 0;
+var bullet = 0;
 function c_text(text1, line) {
   switch (line) {
 	  case 0:
