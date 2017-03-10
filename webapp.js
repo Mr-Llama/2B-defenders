@@ -21,6 +21,13 @@ var countdownFire = 30;
 var ironMiners = 0;
 var hypo = 0;
 var bullets = 0;
+<<<<<<< HEAD
+var creature = "";
+
+
+=======
+>>>>>>> origin/JS
+
 function c_text(text1, line) {
   switch (line) {
 	  case 0:
@@ -75,7 +82,26 @@ function woodSword() {
 				wood -= 10;
 				leather -= 5;
 				c_text("You made a wood sword", 1);
-				weapon = "wooden sword";
+				weapon = "wooden_sword";
+				document.getElementById("weapon").value="weapon =" + weapon;
+		}
+		
+function ironSword() {
+		if(iron >= 10 && leather >= 5) {
+				iron -= 10;
+				leather -= 5;
+				c_text("You made a iron sword", 1);
+				weapon = "iron_sword";
+				document.getElementById("weapon").value="weapon =" + weapon;
+		}
+		
+		
+function diamondSword() {
+		if(diamond >= 10 && leather >= 5) {
+				diamond -= 10;
+				leather -= 5;
+				c_text("You made a diamond sword", 1);
+				weapon = "diamond_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
 		}
 		else{
@@ -392,7 +418,7 @@ function ironMining() {
 	document.getElementById("iron").value = "iron: " + iron;	
 	pick_durab -= 3 * ironMiners;
 	document.getElementById("pick_durab").value =  pick_durab; 	
-	document.getElementById("pcik_durab").value = "Pick Durability: " + pick_durab;	
+	document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
 }
 }
 	
@@ -435,11 +461,28 @@ function hunting() {
 
 
 function attackM() {
-		if(weapon = "wooden sword") {
+		if(weapon = "wooden_sword") {
 				var survival = Math.random();
 				if(survival <= 0.25) {
-						c_text()
+						c_text("You survived and killed the " + creature, 3);
+				} 
+				else if(weapon = "iron_sword")	{
+				
+				if(survival <= 0.5) {
+						c_text("You survived and killed the " + creature, 3);
+				} 
+				else if(weapon = "diamond_sword")	{
+				
+				if(survival <= 0.75) {
+						c_text("You survived and killed the " + creature, 3);
 				}
+				}
+				else
+					if(survival <= 0.10) {
+						c_text("You survived and killed the " + creature, 3)	
+					}
+				}
+			}
 		}
 }
 
@@ -448,27 +491,6 @@ function attackR() {
 				
 		}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
