@@ -70,7 +70,7 @@ function diamond_armor() {
 			c_text("You dont have enough diamonds to make armor...", 1);
 		}
 }
-
+/*
 function woodSword() {
 		if(wood >= 10 && leather >= 5) {
 				wood -= 10;
@@ -102,7 +102,7 @@ function diamondSword() {
 			c_text("You are short of resources...", 1)	;
 		}
 } 
-
+*/
 function day() {
 	document.body.style.backgroundColor = "white";
 	$('.button').addClass('light');
@@ -421,7 +421,6 @@ window.setInterval(villagerWood, 5000);
 window.setInterval(ironMining, 5000);
 window.setInterval(needFire, 1000);
 
-
 function makeRifle() {
 	 if(wood >= 30 && iron >= 10) {
 			 secWeapon = "Hunting Rifle";
@@ -471,7 +470,7 @@ function attackM() {
 						c_text("You survived and killed the " + creature, 3);
 				}
 				}
-				else
+				else {
 					if(survival <= 0.10) {
 						c_text("You survived and killed the " + creature, 3)	;
 					}
@@ -543,9 +542,6 @@ function screenChange(id){
 				break;
 		}
 }
-
-
-
 
 
 
