@@ -20,7 +20,7 @@ var secWeapon = "";
 var countdownFire = 30;
 var ironMiners = 0;
 var hypo = 0;
-var bullets = 0;
+var bullet = 0;
 var creature = "";
 
 
@@ -93,10 +93,10 @@ function ironSword() {
 				document.getElementById("weapon").value="weapon =" + weapon;
 		}
 		
-		
+}
 function diamondSword() {
-		if(diamond >= 10 && leather >= 5) {
-				diamond -= 10;
+		if(diamonds >= 10 && leather >= 5) {
+				diamonds -= 10;
 				leather -= 5;
 				c_text("You made a diamond sword", 1);
 				weapon = "diamond_sword";
@@ -430,7 +430,7 @@ function makeRifle() {
 	 if(wood >= 30 && iron >= 10) {
 			 secWeapon = "Hunting Rifle";
 		}else {
-			c_text("You don't have enough resources.", 1)	
+			c_text("You don't have enough resources.", 1);
 		}
 }
 
@@ -459,17 +459,17 @@ function hunting() {
 
 
 function attackM() {
-		if(weapon = "wooden_sword") {
+		if(weapon === "wooden_sword") {
 				var survival = Math.random();
 				if(survival <= 0.25) {
 						c_text("You survived and killed the " + creature, 3);
 				} 
-				else if(weapon = "iron_sword")	{
+				else if(weapon === "iron_sword")	{
 				
 				if(survival <= 0.5) {
 						c_text("You survived and killed the " + creature, 3);
 				} 
-				else if(weapon = "diamond_sword")	{
+				else if(weapon === "diamond_sword")	{
 				
 				if(survival <= 0.75) {
 						c_text("You survived and killed the " + creature, 3);
@@ -477,7 +477,7 @@ function attackM() {
 				}
 				else
 					if(survival <= 0.10) {
-						c_text("You survived and killed the " + creature, 3)	
+						c_text("You survived and killed the " + creature, 3)	;
 					}
 				}
 			}
@@ -485,11 +485,10 @@ function attackM() {
 }
 
 function attackR() {
-		if(secWeapon = wood) {
+		if(secWeapon === wood) {
 				
 		}
 }
-
 
 
 
@@ -512,7 +511,7 @@ function iMiner(change){
 		 c_text("You don't have any villagers to become miners", 1);
 	 }
 }
-
+/*
 
 function screenChange(id){
 		$('.crafting').hide(10);
@@ -553,10 +552,7 @@ function screenChange(id){
 
 
 
-
-
-
-
+*/
 
 
 
