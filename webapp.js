@@ -22,10 +22,6 @@ var ironMiners = 0;
 var hypo = 0;
 var bullet = 0;
 var creature = "";
-
-
-
-
 function c_text(text1, line) {
   switch (line) {
 	  case 0:
@@ -511,7 +507,7 @@ function iMiner(change){
 		 c_text("You don't have any villagers to become miners", 1);
 	 }
 }
-/*
+
 
 function screenChange(id){
 		$('.crafting').hide(10);
@@ -552,7 +548,6 @@ function screenChange(id){
 
 
 
-*/
 
 
 
