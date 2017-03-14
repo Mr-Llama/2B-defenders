@@ -540,6 +540,9 @@ if(weapon === "diamond_sword"){
 					die();
 				}
 }	
+else{
+		c_text("You don't even have a sword kiddo.", 3);
+}
 }
 
 
@@ -567,7 +570,9 @@ if(secWeapon === "Bow" && arrow >= 1){
 					}
 				
 }
-
+else{
+		c_text("You don't even have a weapon kiddo.", 3);
+}
 
 
 
