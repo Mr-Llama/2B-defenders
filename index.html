@@ -110,6 +110,19 @@
     <p>100 wood</p>
   </div>
 </div>
+
+			<input type="button" class="button crafting" value="Start Fire" onclick="startFire()">
+			<input type="button" class="button crafting" value="Make traps" onClick="makeTrap()">
+			<input type="button" class="button crafting" value="Check Traps" onClick="checkTraps()">
+			<input type="button" class="button crafting" value="Leather Armor" onClick="leather_armor()">
+			<input type="button" class="button crafting" value="iron Armor" onClick="iron_armor()">
+			<input type="button" class="button crafting" value="Diamond Armor" onClick="diamond_armor()">
+			<input type="button" class="button crafting" value="Make Wooden Sword" onClick="woodSword()">
+			<input type="button" class="button crafting" value="Make Iron Sword" onClick="ironSword()">
+			<input type="button" class="button crafting" value="Make Diamond Sword" onClick="woodSword()">
+			<input type="button" class="button village" value="Trading" onClick="trade()">
+			<input type="button" class="button crafting" value="Make Pickaxe" onClick=" makePickaxe()">
+			<input type="button" class="button crafting" value="Make House" onClick=" makeHouse()">
 		<!--village-->
 <div class="dropdown">
   <button  class="button village" onclick="grabWood()">Grab Wood</button>
@@ -160,7 +173,7 @@
 			</table>
 			<!--Hunting-->
 			<input type="button" class="button area" value="Hunting" onClick="hunting()">
-			<div id="huntingScreen" class="div">
+			<div id="huntingScreen">
 				<div id="huntingInterface" class="div">
 					<p id="huntingText"></p>
 					<div id="huntingImage" class="div">
@@ -168,10 +181,12 @@
 							<div id="enemy"></div>
 					</div>
 				</div>
-				<input type="button" class="button hunting" id="1" value="Melee Attack" onClick="attackM()">
-				<input type="button" class="button hunting" id="2" value="Ranged Attack" onClick="attackR()">
-				<input type="button" class="button hunting" id="3" value="Hide" onClick="hide()">
-				<input type="button" class="button hunting" id="4" value="Run" onClick="run()">
+				<div id="huntingButtons">
+					<input type="button" class="button hunting" id="1" value="Melee Attack" onClick="attackM()">
+					<input type="button" class="button hunting" id="2" value="Ranged Attack" onClick="attackR()">
+					<input type="button" class="button hunting" id="3" value="Hide" onClick="hide()">
+					<input type="button" class="button hunting" id="4" value="Run" onClick="run()">
+				</div>
 			</div>
 		<!--cave-->
 		<div class="dropdown">

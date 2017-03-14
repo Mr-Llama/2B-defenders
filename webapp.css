@@ -6,8 +6,6 @@
 	width: 80%;
 	height: auto;
 }
-
-
 .map_button {
 	height: 45px;
 	width: 45px;
@@ -15,8 +13,71 @@
 	border: thick;
 	border-radius: 4px;
 }
-
-
+#huntingScreen {
+		border: groove;
+		border-radius: 5px;
+		border-width: 5px;
+		border-color: green;
+		width: 80%;
+		height: 360px;
+		background-color: brown;
+}
+#huntingInterface {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 90%;
+		float: right;
+		margin-right: 32px;
+		height: 65%;
+		background-color: rgba(53,206,62,1.00);
+}
+#huntingText {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 94%;
+		float: right;
+		margin-right: 16px;
+		height: auto;
+		background-color: white;
+}
+#player {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 46%;
+		float: left;
+		margin-right: 16px;
+		margin-top: 5%;
+		height: 140px;
+		background-color: white;
+}
+#enemy {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 46%;
+		float: right;
+		margin-right: 16px;
+		height: 140px;
+		background-color: white;
+}
+#huntingButtons {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 95%;
+		float: right;
+		margin-right: 16px;
+		height: 30%;
+		background-color: rgba(129,103,30,1.00);
+}
 #inventory {
 	float: right;
 	width: 19%;
@@ -24,21 +85,19 @@
 	text-align: center;
 	border: medium;
 }
-
 .inventoryitem {
 	border-color: black;
 	color: black;
 	height: 10px;
 	background-color: white;
 }
-
 #body {
 		width: auto;
 		height: 95%;
 }
 #textbox {
 	width: 18%;
-	height: 500px;
+	height: 550px;
 	padding: 5px;
 	float: left;
 }
@@ -48,12 +107,10 @@
 	padding: 25px;
 	float: right;
 }
-
 #areaImage {
 	background-image: url(images/backgroundMap.jpg)	;
 	background-size:100%;
 }
-
 #crafting {
 	color: white;
 	font-size: 12px;
@@ -63,7 +120,6 @@
 	background-size: 100%
 	
 }
-
 #village {
 	color: black;
 	font-size:13px;
@@ -73,7 +129,6 @@
 	background-size: 100%
 	
 }
-
 #area {
 	color: white;
 	font-size: 13px;
@@ -83,7 +138,6 @@
 	background-size: 190%
 	
 }
-
 #cave {
 	color: white;
 	font-size:13px;
@@ -93,7 +147,6 @@
 	background-size: 160%
 	
 }
-
 #screen {	
 	width: 75%;
 	height: auto;
@@ -101,7 +154,6 @@
 	right: 10px;
 	float: right;
 }
-
 #footer {
 	padding: 5px;
 	clear: both;
@@ -112,7 +164,6 @@
 	border: medium;
 	border-radius: 7px;
 }
-
 .Night {
 	background-color: lightgray;	
 	border: medium;
@@ -125,7 +176,6 @@
 		font-size: 10px;
 		
 }
-
 .light {
 		color: black;
 		background-color: white;
@@ -150,8 +200,6 @@
 		border-right-color: #404040;
 		border-bottom-color: #404040;
 }
-
-
 .darkDiv {
 	background-color: darkgrey;
 	border: ridge;
