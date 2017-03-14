@@ -21,6 +21,7 @@ var countdownFire = 30;
 var ironMiners = 0;
 var hypo = 0;
 var bullet = 0;
+var arrow = 0;
 var creature = "";
 var survivalRate = Math.random();
 var killRate = Math.random(); 
@@ -455,9 +456,10 @@ function hunting() {
 		$('#huntingScreen').show(10);
 		$('.area').hide(10);
 	//<---JQuery--->	
-	
-	
-	//Hunting
+}
+
+function attackM() {
+	//Hunting Melee
 	if(weapon === "wooden_sword"){
 				if (survivalRate <= 0.25 && killRate <= 0.25) {
 					c_text("You survived and slayed the " + creature, 3);
@@ -465,11 +467,11 @@ function hunting() {
 				}
 	
 				else if(survivalRate <= 0.25 && killRate >= 0.25) {
-					c_text("You lived to tell the tale but the " + creature + " still lives.");
+					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.");
+					c_text("The " + creature + " killed you.", 3);
 					die();
 				}
 }
@@ -482,11 +484,11 @@ if(weapon === "iron_sword"){
 				}
 	
 				else if(survivalRate <= 0.5 && killRate >= 0.5) {
-					c_text("You lived to tell the tale but the " + creature + " still lives.");
+					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.");
+					c_text("The " + creature + " killed you.", 3);
 					die();
 				}
 }
@@ -500,16 +502,80 @@ if(weapon === "diamond_sword"){
 				}
 	
 				else if(survivalRate <= 0.75 && killRate >= 0.75) {
-					c_text("You lived to tell the tale but the " + creature + " still lives.");
+					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.");
+					c_text("The " + creature + " killed you.", 3);
 					die();
 				}
-}
+}	
 }
 
+
+function attackR() {
+	if(secWeapon === "Hunting Rifle" && Bullets >= 1){
+					if(survivalRate <= 1 && killRate <= 1){
+						c_text("You killed the dood.", 3);	
+					}	
+					else{
+						c_text("You are so bad a 100 percent kill and survival rate can't save you.", 3)	;
+					}
+				
+}
+
+
+if(secWeapon === "Bow" && arrow >= 1){
+					if(survivalRate <= 0.7 && killRate <= 0.7){
+						c_text("You killed the dood.", 3);	
+					}	
+					else if(survivalRate <= 0.7 && killRate >= 0.7){
+						c_text("You survived but the beast still lives.", 3);	
+					}	
+					else{
+						c_text("You were killed by the " + creature + "!", 3);
+					}
+				
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
