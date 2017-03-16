@@ -74,7 +74,7 @@ function diamond_armor() {
 			c_text("You dont have enough diamonds to make armor...", 1);
 		}
 }
-/*
+
 function woodSword() {
 		if(wood >= 10 && leather >= 5) {
 				wood -= 10;
@@ -106,7 +106,7 @@ function diamondSword() {
 			c_text("You are short of resources...", 1)	;
 		}
 } 
-*/
+
 function day() {
 	document.body.style.backgroundColor = "white";
 	$('.button').addClass('light');
@@ -368,12 +368,12 @@ function makeHouse() {
 	 	c_text("Not enough wood", 1);
 	 }
 }
-
+/*
 function update() {
 		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die", 2);
 		window.setInterval(countdownFire-=1, 1000);
 }
-
+*/
 function villagerWood() {
 	wood+=villagers;
 	document.getElementById("wood").value =  wood; 	
