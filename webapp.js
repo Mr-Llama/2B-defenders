@@ -45,6 +45,10 @@ function c_text(text1, line) {
 			document.getElementById("huntingText").innerHTML = text1;
 			document.getElementById("huntingText").value =  text1;
 			break;
+	case 4:
+			document.getElementById("text3").innerHTML = text1;
+			document.getElementById("text3").value =  text1;
+			break;
 		
 	default:
 			document.getElementById("text1").innerHTML = text1;
