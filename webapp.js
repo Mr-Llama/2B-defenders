@@ -368,12 +368,12 @@ function makeHouse() {
 	 	c_text("Not enough wood", 1);
 	 }
 }
-
+/*
 function update() {
 		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die", 2);
 		window.setInterval(countdownFire-=1, 1000);
 }
-
+*/
 function villagerWood() {
 	wood+=villagers;
 	document.getElementById("wood").value =  wood; 	
