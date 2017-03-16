@@ -17,9 +17,12 @@ var villagers = 0;
 var fire = 0;
 var weapon = "";
 var secWeapon = "";
+var food = 0;
 var countdownFire = 30;
+var countdownFood = 60;
 var ironMiners = 0;
 var hypo = 0;
+var hypo2 = 0;
 var bullet = 0;
 var arrow = 0;
 var creature = "";
@@ -134,6 +137,7 @@ function grabWood() {
 function reducefire() {
 	fire-=1;
 }
+
 function startFire() {
 	
 	 if(wood >= 5) {
@@ -388,7 +392,13 @@ function die() {
 	
 }
 
-
+function die2() {
+	if(hypo===1) {
+		alert("You have died! >:-)");
+		location.reload();
+	}
+	
+}
 
 
 
@@ -419,11 +429,29 @@ function ironMining() {
 	document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
 }
 }
+
+function needFood() {
+		if(food===0) {
+		c_text("You need food or you will die. If you dont eat in the next " + countdownFood + " seconds you will get starve and die. You can get food by hunting. Hurry Up", 4);
+		window.setInterval(countdownFood-=1, 1000);
+			if(countdownFood===0){
+				hypo2 = 1;
+			}
+		}else{
+		countdownFood=30;
+		hypo2 = 0;	
+		c_text("", 4);
+		
+}
+window.setInterval(die2, 30000);
+}
 	
 
 window.setInterval(villagerWood, 5000);
 window.setInterval(ironMining, 5000);
 window.setInterval(needFire, 1000);
+window.setInterval(needFood, 30000);
+window.setInterval(food-=1, 30000);
 
 function makeRifle() {
 	 if(wood >= 30 && iron >= 10) {
