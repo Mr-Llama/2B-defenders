@@ -34,27 +34,109 @@
 		<input type="button" class="button" id="cave" value="cave" onClick="screenChange(3)">
 	</div>
 	<div id="screen" class="div">
-		<div id="buttons" class="div">
 		<!--crafting-->
-			<input type="button" class="button crafting" value="Start Fire" onclick="startFire()">
-			<input type="button" class="button crafting" value="Make traps" onClick="makeTrap()">
-			<input type="button" class="button crafting" value="Check Traps" onClick="checkTraps()">
-			<input type="button" class="button crafting" value="Leather Armor" onClick="leather_armor()">
-			<input type="button" class="button crafting" value="iron Armor" onClick="iron_armor()">
-			<input type="button" class="button crafting" value="Diamond Armor" onClick="diamond_armor()">
-			<input type="button" class="button crafting" value="Make Wooden Sword" onClick="woodSword()">
-			<input type="button" class="button crafting" value="Make Iron Sword" onClick="ironSword()">
-			<input type="button" class="button crafting" value="Make Diamond Sword" onClick="diamondSword()"><strong></strong>
-			<input type="button" class="button village" value="Trading" onClick="trade()">
-			<input type="button" class="button crafting" value="Make Pickaxe" onClick=" makePickaxe()">
-			<input type="button" class="button crafting" value="Make House" onClick=" makeHouse()">
-			
+
+		<div id="buttons" class="div">
+		<div class="dropdown">
+  <button  class="button crafting" onclick="startFire()">Start Fire</button>
+  <div class="dropdown-content">
+    <p>5 wood</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button crafting" onclick="makeTrap()">Make Trap</button>
+  <div class="dropdown-content">
+    <p>10 wood</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="checkTraps()">Check Traps</button>
+  <div class="dropdown-content">
+    <p>At least 1 trap</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="leather_armor()">Make Leather Armor</button>
+  <div class="dropdown-content">
+    <p>100 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="iron_armor()">Make Iron Armor</button>
+  <div class="dropdown-content">
+    <p>100 iron</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="diamond_armor()">Make Diamond Armor</button>
+  <div class="dropdown-content">
+    <p>50 diamond</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="woodSword()">Make Wooden Sword</button>
+  <div class="dropdown-content">
+    <p>10 wood</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="ironSword()">Make Iron Sword</button>
+  <div class="dropdown-content">
+	<p>10 iron</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="diamondSword()">Make Diamond Sword</button>
+  <div class="dropdown-content">
+    <p>10 diamond</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="trade()">Trading</button>
+  <div class="dropdown-content">
+    <p>Trade anything the villager asks you for if you have it</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="makePickaxe()">Make Pickaxe</button>
+  <div class="dropdown-content">
+    <p>20 wood</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="makeHouse()">Make House</button>
+  <div class="dropdown-content">
+    <p>100 wood</p>
+  </div>
+</div>
+
+
 		<!--village-->
-			<input type="button" class="button village" value="Grab Wood" onclick="grabWood()">
-		
-			<input type="text" class="button village" value="Add iron miners" readonly>
-			<input type="button" class="button village" value="+1" onClick="iMiner(1)">
-			<input type="button" class="button village" value="-1" onClick="iMiner(-1)">
+<div class="dropdown">
+  <button  class="button village" onclick="grabWood()">Grab Wood</button>
+  <div class="dropdown-content">
+    <p>Plus 1 Wood</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button village" onclick="iMiner(1)">+1</button>
+  <div class="dropdown-content">
+    <p>Costs 1 Villager</p>
+	<p>Automatically Gives Iron</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button village" onclick="iMiner(-1)">-1</button>
+  <div class="dropdown-content">
+    <p>Gives Back 1 Villager</p>
+	<p>Costs 1 Iron Miner</p>
+  </div>
+</div>
+<input type="text" class="button village" value="Add iron miners" readonly>
 		<!--area-->
 			<table border="0" class="area" id="areaImage">
 			<caption>Map</caption>
@@ -99,11 +181,26 @@
 				</div>
 			</div>
 		<!--cave-->
-			<input type="button" class="button cave" value="Mine" onclick="screenChange(4)">
-			<input type="button" class="button mine" value="Get Iron" onClick="get_Iron();">
-			<input type="button" class="button mine" value="Get Diamond" onClick="get_diamond();">
-			<input type="button" class="button cave" value="" onClick="">
-			<input type="button" class="button cave" value="" onClick="">
+		<div class="dropdown">
+  <button  class="button cave" onclick="screenChange(4)">Mine</button>
+  <div class="dropdown-content">
+    <p>Needs a Pickaxe</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button mine" onclick="get_Iron()">Get Iron</button>
+  <div class="dropdown-content">
+    <p>Costs 5 Pickaxe Durability</p>
+	<p>Gives you 1 iron</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button mine" onclick="get_diamond()">Get diamond</button>
+  <div class="dropdown-content">
+    <p>Costs 10 Pickaxe Durability</p>
+	<p>Gives you 1 diamond</p>
+  </div>
+</div>
 			</div>
 		<div id="inventory" class="div">
 		

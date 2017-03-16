@@ -408,8 +408,6 @@ function makeHouse() {
 	 }
 }
 
-
-
 function villagerWood() {
 	wood+=villagers;
 	document.getElementById("wood").value =  wood; 	
