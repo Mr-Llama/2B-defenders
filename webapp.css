@@ -13,6 +13,7 @@
 	border: thick;
 	border-radius: 4px;
 }
+/*Hunting Stuff*/
 #huntingScreen {
 		border: groove;
 		border-radius: 5px;
@@ -55,6 +56,16 @@
 		height: 30%;
 		background-color: rgba(129,103,30,1.00);
 }
+.dArmor {
+		background-image: url(images/DiamondArmor.png);
+}
+.iArmor {
+		background-image: url(images/IronArmor.png);
+}
+.lArmor {
+		background-image: url(images/LeatherArmor.png);
+}
+/*Inventory*/
 #inventory {
 	float: right;
 	width: 19%;
