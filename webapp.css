@@ -50,12 +50,11 @@
 		border-radius: 5px;
 		border-width: 3px;
 		border-color: black;
-		width: 46%;
+		width: 30%;
 		float: left;
 		margin-right: 16px;
 		margin-top: 5%;
 		height: 140px;
-		background-color: white;
 }
 #enemy {
 		border: ridge;
@@ -81,12 +80,15 @@
 }
 .dArmor {
 		background-image: url(images/DiamondArmor.png);
+		background-size: 100%;
 }
 .iArmor {
 		background-image: url(images/IronArmor.png);
+		background-size: 100%;
 }
 .lArmor {
 		background-image: url(images/LeatherArmor.png);
+		background-size: 100%;
 }
 .bear {
 	
