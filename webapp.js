@@ -87,6 +87,7 @@ function leather_armor() {
 		if(leather >= 100) {
 		    leather -= 100;
 			armor="leather";
+			$('#player').addClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough leather to make armor...", 1);	
@@ -97,6 +98,8 @@ function iron_armor() {
 		if(iron >= 100) {
 			iron -= 100;
 			armor="iron";
+			$('#player').addClass('iArmor');
+			$('#player').removeClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough iron to make armor...", 1);
@@ -107,6 +110,9 @@ function diamond_armor() {
 		if(diamonds >= 50) {
 			armor="diamond";
 			diamonds -= 50;
+			$('#player').addClass('dArmor');
+			$('#player').removeClass('iArmor');
+			$('#player').removeClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough diamonds to make armor...", 1);
