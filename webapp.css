@@ -32,7 +32,7 @@
 		float: right;
 		margin-right: 32px;
 		height: 65%;
-		background-color: rgba(53,206,62,1.00);
+		background-color: white;
 }
 #huntingText {
 		border: ridge;
@@ -43,7 +43,7 @@
 		float: right;
 		margin-right: 16px;
 		height: auto;
-		background-color: white;
+		background-color: offwhite;
 }
 #player {
 		border: ridge;
@@ -64,8 +64,8 @@
 		width: 46%;
 		float: right;
 		margin-right: 16px;
-		height: 140px;
-		background-color: white;
+		height: 146px;
+		background-color: offwhite;
 }
 #huntingButtons {
 		border: ridge;
@@ -77,6 +77,16 @@
 		margin-right: 16px;
 		height: 30%;
 		background-color: rgba(129,103,30,1.00);
+}
+.hunting {
+		width: 48%;
+		height:48%;
+		margin-left: 7px;
+		margin-top: 2px;
+		color: rgba(216,181,113,1.00);
+		background-color:rgba(62,45,10,1.00);
+		font-size:24px;
+		border-radius: 20px;
 }
 .dArmor {
 		background-image: url(images/DiamondArmor.png);
@@ -91,16 +101,20 @@
 		background-size: 100%;
 }
 .bear {
-	
+		background-image: url(images/bear.png);
+		background-size: 100%;
 }
 .wolf {
-	
+		background-image: url(images/wolf.png);
+		background-size: 100%;
 }
 .goblin {
-	
+		background-image: url(images/goblin.png);
+		background-size: 100%;
 }
 .dragon {
-	
+		background-image: url(images/dragon.png);
+		background-size: 100%;
 }
 /*Inventory*/
 #inventory {
@@ -313,4 +327,5 @@
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}#4 {
 }
