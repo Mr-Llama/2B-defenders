@@ -99,16 +99,20 @@
 		background-size: 100%;
 }
 .bear {
-	
+		background-image: url(images/bear.png);
+		background-size: 100%;
 }
 .wolf {
-	
+		background-image: url(images/wolf.png);
+		background-size: 100%;
 }
 .goblin {
-	
+		background-image: url(images/goblin.png);
+		background-size: 100%;
 }
 .dragon {
-	
+		background-image: url(images/dragon.png);
+		background-size: 100%;
 }
 /*Inventory*/
 #inventory {
