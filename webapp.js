@@ -1,7 +1,7 @@
 // JavaScript Document
 
 
-var wood = 1000;
+var wood = 0;
 var gems = 0;
 var leather = 0;
 var diamonds = 0;
@@ -131,26 +131,35 @@ function diamond_armor() {
 function woodSword() {
 		if(wood >= 10 && leather >= 5) {
 				wood -= 10;
+				document.getElementById("wood").value="wood: " + wood;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a wood sword", 1);
 				weapon = "wooden_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
-		}
+		} else {
+				c_text("You don't have enough wood and leather, TRASH", 1);
+}
 }
 function ironSword() {
 		if(iron >= 10 && leather >= 5) {
 				iron -= 10;
+				document.getElementById("iron").value="iron: " + iron;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a iron sword", 1);
 				weapon = "iron_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
-		}
-		
+		}else {
+				c_text("You don't have enough iron and leather, TRASH", 1);
+}	
 }
 function diamondSword() {
 		if(diamonds >= 10 && leather >= 5) {
 				diamonds -= 10;
+				document.getElementById("diamonds").value="diamonds: " + diamonds;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a diamond sword", 1);
 				weapon = "diamond_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
@@ -547,10 +556,10 @@ function attackM() {
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
-				}break;
-
+					alert("The " + creature + " killed you.");
+					location.reload();
+				}
+				break;
 
 
 
@@ -561,8 +570,8 @@ case "iron_sword":
 				}else if(survivalRate <= 0.5 && killRate >= 0.5) {
 					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
+					alert("The " + creature + " killed you.");
+					location.reload();
 				}break;
 
 
@@ -580,8 +589,8 @@ case "diamond_sword":
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
+				alert("The " + creature + " killed you.");
+					location.reload();
 				}break;
 	
 			default: 
