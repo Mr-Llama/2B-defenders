@@ -65,22 +65,27 @@ function creatureSelect() {
 		case 2:
 		case 3:
 				creature="bear";
+				document.getElementById("enemy").className = "bear";
 				break;
 		case 4:
 		case 5:
 		case 6:
 				creature="wolf";
+				document.getElementById("enemy").className = "wolf";
 				break;
 		case 7:
 		case 8:
-					creature="Goblin";
+					creature="goblin";
+					document.getElementById("enemy").className = "goblin";
 					break;
 		case 9:
 		case 10: 
-				creature="Dragon";
+				creature="dragon";
+				document.getElementById("enemy").className = "dragon";
 				break;
 		default:
 				creature="bear";
+				document.getElementById("enemy").className = "bear";
 				break;
 			
 	}
