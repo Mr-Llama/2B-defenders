@@ -60,32 +60,36 @@ function c_text(text1, line) {
 
 function creatureSelect() {
 	var creaturenum = Math.random() * 10;
+	$('.enemy').removeClass('bear');
+	$('.enemy').removeClass('wolf');
+	$('.enemy').removeClass('goblin');
+	$('.enemy').removeClass('dragon');
 	switch (creaturenum) {
 		case 1:
 		case 2:
 		case 3:
 				creature="bear";
-				document.getElementById("enemy").className = "bear";
+				$('.enemy').addClass('bear');
 				break;
 		case 4:
 		case 5:
 		case 6:
 				creature="wolf";
-				document.getElementById("enemy").className = "wolf";
+				$('.enemy').addClass('wolf');								
 				break;
 		case 7:
 		case 8:
 					creature="goblin";
-					document.getElementById("enemy").className = "goblin";
+					$('.enemy').addClass('goblin');
 					break;
 		case 9:
 		case 10: 
 				creature="dragon";
-				document.getElementById("enemy").className = "dragon";
+				$('.enemy').addClass('dragon');
 				break;
 		default:
 				creature="bear";
-				document.getElementById("enemy").className = "bear";
+				$('.enemy').addClass('bear');
 				break;
 			
 	}
@@ -179,7 +183,7 @@ function day() {
 
 function night() {
 	document.body.style.backgroundColor = "black";
-	$('.button').addClass('dark');
+	c
 	$('.button').removeClass('light');
 	$('.div').addClass('darkDiv');
 	$('.div').removeClass('lightDiv');
