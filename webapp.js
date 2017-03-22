@@ -560,7 +560,10 @@ function attackM() {
 	case "wooden_sword":
 				if (survivalRate <= 0.25 && killRate <= 0.25) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+						$('#enemy').removeClass('bear');
+						$('#enemy').removeClass('wolf');
+						$('#enemy').removeClass('goblin');
+						$('#enemy').removeClass('dragon');
 				}
 	
 				else if(survivalRate <= 0.25 && killRate >= 0.25) {
@@ -578,7 +581,10 @@ function attackM() {
 case "iron_sword":
 				if (survivalRate <= 0.5 && killRate <= 0.5) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+							$('#enemy').removeClass('bear');
+	$('#enemy').removeClass('wolf');
+	$('#enemy').removeClass('goblin');
+	$('#enemy').removeClass('dragon');	
 				}else if(survivalRate <= 0.5 && killRate >= 0.5) {
 					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}else{
@@ -593,7 +599,10 @@ case "iron_sword":
 case "diamond_sword":					
 				if (survivalRate <= 0.75 && killRate <= 0.75) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+						$('#enemy').removeClass('bear');
+	$('#enemy').removeClass('wolf');
+	$('#enemy').removeClass('goblin');
+	$('#enemy').removeClass('dragon');
 				}
 	
 				else if(survivalRate <= 0.75 && killRate >= 0.75) {
