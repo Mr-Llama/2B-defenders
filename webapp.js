@@ -266,36 +266,37 @@ switch(chooseNum) {
 	case 3:
 	
 				var firstCase = confirm("Would you like to trade 5 fur for 1 gem?");
-				if(firstCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-				else if(firstCase && fur >= 5) {
+				
+				if(firstCase && fur >= 5) {
 					fur-=5;
 					document.getElementById("fur").value =  fur; 
 					document.getElementById("fur").value = "fur: " + fur;	
 					gems+=1;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
-					}else{
-						c_text("You don't have enough fur...", 1);
+				}else if(fur<5){
+					c_text("You don't have enough fur...", 1);
+				}else{
+							c_text("FINE DON'T TRADE! I DONT CARE!", 1);
 					}
 					break;
 
 	case 5:
 	case 6:
 			var secondCase = confirm("Would you like to trade 20 fur for 100 leather?");
-				if(secondCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					else if(secondCase && fur >= 20) {
+				
+					 if(secondCase && fur >= 20) {
 					fur-=20;
 					document.getElementById("fur").value =  fur; 
 					document.getElementById("fur").value = "fur: " + fur;	
 					leather+=100;
 					document.getElementById("leather").value =  leather; 
 					document.getElementById("leather").value = "leather: " + leather;	
+					 }
+					else if(secondCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+				
+				
 					}else{
 						c_text("You don't have enough fur...", 1);
 				}
@@ -304,34 +305,36 @@ switch(chooseNum) {
 	case 8:
 	
 				var thirdCase = confirm("Would you like to trade 10 gems for 1 diamond?");
-				if(thirdCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					else if(thirdCase && gems >= 10) {
+					 if(thirdCase && gems >= 10) {
 					gems-=10;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
-					}else {
+					 }
+					else if(thirdCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+					
+				}
+					else {
 						c_text("You don't have enough gems...", 1);
 				}
 				break;
 	case 10: 
 				var fourthCase = confirm("Would you like to trade 1000 wood for 1 diamond?");
-				if(fourthCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					else if(fourthCase && wood >= 1000 ) {
+				 if(fourthCase && wood >= 1000 ) {
 					wood-=1000;
 					document.getElementById("wood").value =  wood; 
 					document.getElementById("wood").value = "wood: " + wood;	
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
+					}
+					else if(fourthCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+					
+				
 					}else{
 						c_text("You don't have enough wood...", 1);
 				}
@@ -339,17 +342,18 @@ switch(chooseNum) {
 	default:
 	
 			   var fifthCase = confirm("Would you like to trade 50 leather for 5 gems?");
-			   if(fifthCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-			   	else if(fifthCase && leather >= 50) {
+			   
+			   	 if(fifthCase && leather >= 50) {
 					leather-=50;
 					document.getElementById("leather").value =  leather; 
 					document.getElementById("leather").value = "leather: " + leather;	
 					gems+=5;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
+				}
+					if(fifthCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+				
 					}else{
 						c_text("You don't have enough leather...", 1);
 				}
