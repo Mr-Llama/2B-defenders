@@ -17,14 +17,18 @@ var villagers = 0;
 var fire = 0;
 var weapon = "";
 var secWeapon = "";
+var food = 0;
 var countdownFire = 30;
+var countdownFood = 60;
 var ironMiners = 0;
 var hypo = 0;
+var hypo2 = 0;
 var bullet = 0;
 var arrow = 0;
 var creature = "";
 var survivalRate = Math.random();
 var killRate = Math.random(); 
+var creaturenum = 0;
 
 function c_text(text1, line) {
   switch (line) {
@@ -37,6 +41,15 @@ function c_text(text1, line) {
 	 		document.getElementById("text2").innerHTML = text1;
 			document.getElementById("text2").value =  text1;
 			break;
+	case 3:
+			document.getElementById("huntingText").innerHTML = text1;
+			document.getElementById("huntingText").value =  text1;
+			break;
+	case 4:
+			document.getElementById("text3").innerHTML = text1;
+			document.getElementById("text3").value =  text1;
+			break;
+		
 	default:
 			document.getElementById("text1").innerHTML = text1;
 			document.getElementById("text1").value =  text1;
@@ -45,10 +58,49 @@ function c_text(text1, line) {
 	
 }
 
+function creatureSelect() {
+	var creaturenum = Math.random() * 10;
+	$('.enemy').removeClass('bear');
+	$('.enemy').removeClass('wolf');
+	$('.enemy').removeClass('goblin');
+	$('.enemy').removeClass('dragon');
+	switch (creaturenum) {
+		case 1:
+		case 2:
+		case 3:
+				creature="bear";
+				$('.enemy').addClass('bear');
+				break;
+		case 4:
+		case 5:
+		case 6:
+				creature="wolf";
+				$('.enemy').addClass('wolf');								
+				break;
+		case 7:
+		case 8:
+					creature="goblin";
+					$('.enemy').addClass('goblin');
+					break;
+		case 9:
+		case 10: 
+				creature="dragon";
+				$('.enemy').addClass('dragon');
+				break;
+		default:
+				creature="bear";
+				$('.enemy').addClass('bear');
+				break;
+			
+	}
+			
+}
+
 function leather_armor() {
 		if(leather >= 100) {
 		    leather -= 100;
 			armor="leather";
+			$('#player').addClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough leather to make armor...", 1);	
@@ -59,6 +111,8 @@ function iron_armor() {
 		if(iron >= 100) {
 			iron -= 100;
 			armor="iron";
+			$('#player').addClass('iArmor');
+			$('#player').removeClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough iron to make armor...", 1);
@@ -69,6 +123,9 @@ function diamond_armor() {
 		if(diamonds >= 50) {
 			armor="diamond";
 			diamonds -= 50;
+			$('#player').addClass('dArmor');
+			$('#player').removeClass('iArmor');
+			$('#player').removeClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
 		}else {
 			c_text("You dont have enough diamonds to make armor...", 1);
@@ -78,26 +135,35 @@ function diamond_armor() {
 function woodSword() {
 		if(wood >= 10 && leather >= 5) {
 				wood -= 10;
+				document.getElementById("wood").value="wood: " + wood;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a wood sword", 1);
 				weapon = "wooden_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
-		}
+		} else {
+				c_text("You don't have enough wood and leather, TRASH", 1);
+}
 }
 function ironSword() {
 		if(iron >= 10 && leather >= 5) {
 				iron -= 10;
+				document.getElementById("iron").value="iron: " + iron;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a iron sword", 1);
 				weapon = "iron_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
-		}
-		
+		}else {
+				c_text("You don't have enough iron and leather, TRASH", 1);
+}	
 }
 function diamondSword() {
 		if(diamonds >= 10 && leather >= 5) {
 				diamonds -= 10;
+				document.getElementById("diamonds").value="diamonds: " + diamonds;
 				leather -= 5;
+				document.getElementById("leather").value="leather: " + leather;
 				c_text("You made a diamond sword", 1);
 				weapon = "diamond_sword";
 				document.getElementById("weapon").value="weapon =" + weapon;
@@ -117,7 +183,7 @@ function day() {
 
 function night() {
 	document.body.style.backgroundColor = "black";
-	$('.button').addClass('dark');
+	c
 	$('.button').removeClass('light');
 	$('.div').addClass('darkDiv');
 	$('.div').removeClass('lightDiv');
@@ -134,6 +200,7 @@ function grabWood() {
 function reducefire() {
 	fire-=1;
 }
+
 function startFire() {
 	
 	 if(wood >= 5) {
@@ -368,12 +435,7 @@ function makeHouse() {
 	 	c_text("Not enough wood", 1);
 	 }
 }
-/*
-function update() {
-		c_text("You need a fire or you will die. If you dont make a fire in the next " + countdownFire + " seconds you will get hypothermia and die", 2);
-		window.setInterval(countdownFire-=1, 1000);
-}
-*/
+
 function villagerWood() {
 	wood+=villagers;
 	document.getElementById("wood").value =  wood; 	
@@ -388,7 +450,13 @@ function die() {
 	
 }
 
-
+function die2() {
+	if(hypo===1) {
+		alert("You have died! >:-)");
+		location.reload();
+	}
+	
+}
 
 
 
@@ -419,11 +487,29 @@ function ironMining() {
 	document.getElementById("pick_durab").value = "Pick Durability: " + pick_durab;	
 }
 }
+
+function needFood() {
+		if(food===0) {
+		c_text("You need food or you will die. If you dont eat in the next " + countdownFood + " seconds you will get starve and die. You can get food by hunting. Hurry Up", 4);
+		window.setInterval(countdownFood-=1, 1000);
+			if(countdownFood===0){
+				hypo2 = 1;
+			}
+		}else{
+		countdownFood=30;
+		hypo2 = 0;	
+		c_text("", 4);
+		
+}
+window.setInterval(die2, 30000);
+}
 	
 
 window.setInterval(villagerWood, 5000);
 window.setInterval(ironMining, 5000);
 window.setInterval(needFire, 1000);
+window.setInterval(needFood, 30000);
+window.setInterval(food-=1, 30000);
 
 function makeRifle() {
 	 if(wood >= 30 && iron >= 10) {
@@ -455,11 +541,15 @@ function hunting() {
 		$('#huntingScreen').show(10);
 		$('.area').hide(10);
 	//<---JQuery--->	
+	creatureSelect();
 }
 
 function attackM() {
+				
 	//Hunting Melee
-	if(weapon === "wooden_sword"){
+			switch(weapon) {
+			
+	case "wooden_sword":
 				if (survivalRate <= 0.25 && killRate <= 0.25) {
 					c_text("You survived and slayed the " + creature, 3);
 					
@@ -470,34 +560,29 @@ function attackM() {
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
+					alert("The " + creature + " killed you.");
+					location.reload();
 				}
-}
+				break;
 
 
-if(weapon === "iron_sword"){
+
+case "iron_sword":
 				if (survivalRate <= 0.5 && killRate <= 0.5) {
 					c_text("You survived and slayed the " + creature, 3);
 					
-				}
-	
-				else if(survivalRate <= 0.5 && killRate >= 0.5) {
+				}else if(survivalRate <= 0.5 && killRate >= 0.5) {
 					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
-				}
-
-	
-				else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
-
-
-				}
-}
+				}else{
+					alert("The " + creature + " killed you.");
+					location.reload();
+				}break;
 
 
 
-if(weapon === "diamond_sword"){
+
+
+case "diamond_sword":					
 				if (survivalRate <= 0.75 && killRate <= 0.75) {
 					c_text("You survived and slayed the " + creature, 3);
 					
@@ -508,12 +593,14 @@ if(weapon === "diamond_sword"){
 				}
 	
 				else{
-					c_text("The " + creature + " killed you.", 3);
-					die();
-				}
-}	
+				alert("The " + creature + " killed you.");
+					location.reload();
+				}break;
+	
+			default: 
+			c_text("You got no sword kiddo", 3);
+			}
 }
-
 
 function attackR() {
 	if(secWeapon === "Hunting Rifle" && Bullets >= 1){
@@ -525,6 +612,10 @@ function attackR() {
 					}
 				
 }
+else{
+		c_text("You don't even have a weapon kiddo.", 3);
+}
+
 
 
 if(secWeapon === "Bow" && arrow >= 1){
@@ -539,7 +630,9 @@ if(secWeapon === "Bow" && arrow >= 1){
 					}
 				
 }
-
+else{
+		c_text("You don't even have a weapon kiddo.", 3);
+}
 
 
 
