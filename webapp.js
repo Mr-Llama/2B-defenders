@@ -99,6 +99,7 @@ function creatureSelect() {
 function leather_armor() {
 		if(leather >= 100) {
 		    leather -= 100;
+			document.getElementById("leather").value = "leather: " + leather;
 			armor="leather";
 			$('#player').addClass('lArmor');
 			document.getElementById("armor").value= "armor = " + armor;	
@@ -110,6 +111,7 @@ function leather_armor() {
 function iron_armor() {
 		if(iron >= 100) {
 			iron -= 100;
+			document.getElementById("iron").value = "iron: " + iron;
 			armor="iron";
 			$('#player').addClass('iArmor');
 			$('#player').removeClass('lArmor');
@@ -123,6 +125,7 @@ function diamond_armor() {
 		if(diamonds >= 50) {
 			armor="diamond";
 			diamonds -= 50;
+			document.getElementById("diamond").value = "diamond: " + diamond;
 			$('#player').addClass('dArmor');
 			$('#player').removeClass('iArmor');
 			$('#player').removeClass('lArmor');
@@ -261,39 +264,39 @@ switch(chooseNum) {
 	case 1:
 	case 2:
 	
-				var firstCase = confirm("Would you like to trade 20 leather for 1 gem?");
-				if(firstCase === false){
+				var firstCase = confirm("Would you like to trade 5 fur for 1 gem?");
+				if(firstCase !== true){
 					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
 					break;
 				}
-				if(firstCase && leather >= 20) {
-					leather-=20;
-					document.getElementById("leather").value =  leather; 
-					document.getElementById("leather").value = "leather: " + leather;	
+				if(firstCase && fur >= 5) {
+					fur-=5;
+					document.getElementById("fur").value =  fur; 
+					document.getElementById("fur").value = "fur: " + fur;	
 					gems+=1;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
 					}else{
-						c_text("You don't have enough leather...", 1);
+						c_text("You don't have enough fur...", 1);
 					}
 					break;
 	case 4:
 	case 5:
 	case 6:
-			var secondCase = confirm("Would you like to trade 100 wood for 10 fur?");
+			var secondCase = confirm("Would you like to trade 20 fur for 100 leather?");
 				if(secondCase === false){
 					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
 					break;
 				}
-					if(secondCase && wood >= 100) {
-					wood-=100;
-					document.getElementById("wood").value =  wood; 
-					document.getElementById("wood").value = "wood: " + wood;	
-					fur+=10;
+					if(secondCase && fur >= 20) {
+					fur-=20;
 					document.getElementById("fur").value =  fur; 
 					document.getElementById("fur").value = "fur: " + fur;	
+					leather+=100;
+					document.getElementById("leather").value =  leather; 
+					document.getElementById("leather").value = "leather: " + leather;	
 					}else{
-						c_text("You don't have enough wood...", 1);
+						c_text("You don't have enough fur...", 1);
 				}
 				break;
 	case 7:
