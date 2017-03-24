@@ -263,12 +263,10 @@ function trade() {
 switch(chooseNum) {
 	case 1:
 	case 2:
+	case 3:
 	
 				var firstCase = confirm("Would you like to trade 5 fur for 1 gem?");
-				if(firstCase !== true){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
+				
 				if(firstCase && fur >= 5) {
 					fur-=5;
 					document.getElementById("fur").value =  fur; 
@@ -276,25 +274,29 @@ switch(chooseNum) {
 					gems+=1;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
-					}else{
-						c_text("You don't have enough fur...", 1);
+				}else if(fur<5){
+					c_text("You don't have enough fur...", 1);
+				}else{
+							c_text("FINE DON'T TRADE! I DONT CARE!", 1);
 					}
 					break;
-	case 4:
+
 	case 5:
 	case 6:
 			var secondCase = confirm("Would you like to trade 20 fur for 100 leather?");
-				if(secondCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					if(secondCase && fur >= 20) {
+				
+					 if(secondCase && fur >= 20) {
 					fur-=20;
 					document.getElementById("fur").value =  fur; 
 					document.getElementById("fur").value = "fur: " + fur;	
 					leather+=100;
 					document.getElementById("leather").value =  leather; 
 					document.getElementById("leather").value = "leather: " + leather;	
+					 }
+					else if(secondCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+				
+				
 					}else{
 						c_text("You don't have enough fur...", 1);
 				}
@@ -303,34 +305,36 @@ switch(chooseNum) {
 	case 8:
 	
 				var thirdCase = confirm("Would you like to trade 10 gems for 1 diamond?");
-				if(thirdCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					if(thirdCase && gems >= 10) {
+					 if(thirdCase && gems >= 10) {
 					gems-=10;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
-					}else {
+					 }
+					else if(thirdCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+					
+				}
+					else {
 						c_text("You don't have enough gems...", 1);
 				}
 				break;
 	case 10: 
 				var fourthCase = confirm("Would you like to trade 1000 wood for 1 diamond?");
-				if(fourthCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-					if(fourthCase && wood >= 1000 ) {
+				 if(fourthCase && wood >= 1000 ) {
 					wood-=1000;
 					document.getElementById("wood").value =  wood; 
 					document.getElementById("wood").value = "wood: " + wood;	
 					diamonds+=1;
 					document.getElementById("diamonds").value =  diamonds; 
 					document.getElementById("diamonds").value = "diamonds: " + diamonds;
+					}
+					else if(fourthCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+					
+				
 					}else{
 						c_text("You don't have enough wood...", 1);
 				}
@@ -338,17 +342,18 @@ switch(chooseNum) {
 	default:
 	
 			   var fifthCase = confirm("Would you like to trade 50 leather for 5 gems?");
-			   if(fifthCase === false){
-					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
-					break;
-				}
-			   	if(fifthCase && leather >= 50) {
+			   
+			   	 if(fifthCase && leather >= 50) {
 					leather-=50;
 					document.getElementById("leather").value =  leather; 
 					document.getElementById("leather").value = "leather: " + leather;	
 					gems+=5;
 					document.getElementById("gems").value =  gems; 
 					document.getElementById("gems").value = "gems: " + gems;	
+				}
+					if(fifthCase === false){
+					c_text("FINE DON'T TRADE! I DONT CARE!", 1);
+				
 					}else{
 						c_text("You don't have enough leather...", 1);
 				}
@@ -555,7 +560,10 @@ function attackM() {
 	case "wooden_sword":
 				if (survivalRate <= 0.25 && killRate <= 0.25) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+						$('#enemy').removeClass('bear');
+						$('#enemy').removeClass('wolf');
+						$('#enemy').removeClass('goblin');
+						$('#enemy').removeClass('dragon');
 				}
 	
 				else if(survivalRate <= 0.25 && killRate >= 0.25) {
@@ -573,7 +581,10 @@ function attackM() {
 case "iron_sword":
 				if (survivalRate <= 0.5 && killRate <= 0.5) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+							$('#enemy').removeClass('bear');
+	$('#enemy').removeClass('wolf');
+	$('#enemy').removeClass('goblin');
+	$('#enemy').removeClass('dragon');	
 				}else if(survivalRate <= 0.5 && killRate >= 0.5) {
 					c_text("You lived to tell the tale but the " + creature + " still lives.", 3);
 				}else{
@@ -588,7 +599,10 @@ case "iron_sword":
 case "diamond_sword":					
 				if (survivalRate <= 0.75 && killRate <= 0.75) {
 					c_text("You survived and slayed the " + creature, 3);
-					
+						$('#enemy').removeClass('bear');
+	$('#enemy').removeClass('wolf');
+	$('#enemy').removeClass('goblin');
+	$('#enemy').removeClass('dragon');
 				}
 	
 				else if(survivalRate <= 0.75 && killRate >= 0.75) {
